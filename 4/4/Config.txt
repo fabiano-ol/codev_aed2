@@ -1,0 +1,9 @@
+Linha de Montagem
+0.1
+
+Ex.: 
+Entrada:                          Saída:
+C = ['a','r','a,'r',a'], n=5      V
+C = ['a','r','a,'r',a'], n=4      F
+C = ['a','r','a,'r',a'], n=3      V
+
