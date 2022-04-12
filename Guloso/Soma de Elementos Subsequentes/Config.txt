@@ -1,0 +1,8 @@
+Soma de Elementos Subsequentes
+0.1
+
+
+Ex.: 
+Entrada:                          Saída:
+
+
