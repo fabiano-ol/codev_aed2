@@ -1,0 +1,12 @@
+Fibonacci
+0.1
+A sequência de Fibonacci consiste em uma sequência de números
+em que um número i é dado pela soma dos dois números que o 
+precedem na sequência.
+Faça um algoritmo de programação dinâmica que calcule o 
+n-ésimo número de Fibonacci. [O(n)]
+
+Ex.: 
+Entrada:            Saída:
+5                   5
+8                   21
