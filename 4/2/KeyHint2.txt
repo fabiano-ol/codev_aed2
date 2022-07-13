@@ -1,0 +1,16 @@
+- Considere que sejam dados os valores x e y correspondendo ao
+  (n-1)-ésimo número de fibonacci e ao (n-2)-ésimo número
+  de fibonacci. A recursão pode lhe ajudar a obter tais x
+  e y.
+
+- Note que o n-ésimo número de fibonacci é obtido por x + y.
+
+- Os casos em que n=1 ou n=2 devem ser tratados separadamente.
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.
+  Empregue um vetor M[0..n] para armazenar as saídas, onde M[i] 
+  armazenará o i-ésimo número de fibonacci.
+
+- Note que preencher o vetor M da posição 0 até n é uma ordem adequada
+  para a programação dinâmica. 
