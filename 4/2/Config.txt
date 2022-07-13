@@ -1,8 +1,0 @@
-Fibonacci
-0.1
-
-
-Ex.: 
-Entrada:            Saída:
-5                   5
-8                   21

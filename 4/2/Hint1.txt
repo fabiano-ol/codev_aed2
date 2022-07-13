@@ -1,9 +1,0 @@
-- Considere que sejam dados os valores x e y correspondendo ao
-  (n-1)-ésimo número de fibonacci e ao (n-2)-ésimo número
-  de fibonacci. A recursão pode lhe ajudar a obter tais x
-  e y.
-
-  Como obter o n-ésimo número de fibonacci a partir de x e y?
-
-- Ao obter a recursão acima, atente para o fato de haver subproblemas
-  repetidos; se for o caso, implemente a técnica de programação dinâmica.

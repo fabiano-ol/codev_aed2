@@ -1,5 +1,0 @@
-- Considere resolver o problema mais geral a seguir:
-
-  Verificar, dados um vetor de caracteres e inteiros i e j,
-  se a cadeia formada pelos elementos C[i..j], é um palíndromo.
-
