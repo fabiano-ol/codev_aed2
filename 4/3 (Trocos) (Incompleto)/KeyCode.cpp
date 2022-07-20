@@ -19,26 +19,16 @@ long long int Trocos(int T, int * M, int N) {
 	
 	for (int t = 1; t <= T+1; t++){
 		for(int n = 1; n <= N; n++){
-			printf("Moeda sendo usada: %d\n", M[n-1]);
+			//printf("Moeda sendo usada: %d\n", M[n-1]);
 			int maiorValor = t - M[n] >= 0 ? t - M[n] : 0;
 			Mem[t+1][n] = Mem[t+1][n-1] + Mem[maiorValor][n];
 			
 			printf("Mem[%d][%d]: %d\n", t+1, n, Mem[t+1][n]);
+			//printf("%d\n", Mem[t+1][n]);
 		}
 	}
 	
 	return Mem[T+1][N];
-	
-	//Solução sem programação dinâmica
-	/*if(T < 0 || N == 0){
-		return 0;
-	} 
-	
-	if(T == 0){
-		return 1;
-	}
-	
-	return Trocos(T, M, N-1) + Trocos(T-M[N-1], M, N);*/
 }
 
 int main() {

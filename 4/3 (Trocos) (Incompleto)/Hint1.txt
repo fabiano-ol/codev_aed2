@@ -1,0 +1,11 @@
+- Considere que seja dado o valor x correspondendo ao número
+  de trocos possível considerando o conjunto até a (n-1)-ésima moeda. 
+  A recursão pode lhe ajudar a obter tal x.
+
+  Como obter o número de trocos possível considerando a n-ésima moeda?
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.
+
+- Por fim, como o tempo mínimo de saída da linha de montagem é dado
+  pelo tempo de chegada até a n-ésima estação da linha 1 ou da linha 2?
