@@ -1,0 +1,15 @@
+
+- Note que os d elementos de b[0..d-1] devem pertencer a todas as permutações 
+  escritas pela função. Se d=k, então há somente uma permutação a ser escrita.
+  Qual é ela?
+
+- Caso d<k, então é necessário escolher mais um elemento para compor a 
+  permutação junto com b[0..d-1]. Quais elementos de {1,...,n} que podem ser
+  escolhidos?
+  
+- Ao escolheremos um i possível, como podemos escrever todas as permutações todas 
+  as permutações de {1,...,n} de tamanho k que contenha os d elementos b[0..d-1], 
+  e mais o i?
+
+- De posse do item anterior, como fazer o que se pede: escrever todas as permutações 
+  de {1,...,n} de tamanho k que contenha os d elementos b[0..d-1]?

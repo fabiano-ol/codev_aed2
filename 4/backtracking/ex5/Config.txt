@@ -1,0 +1,3 @@
+Backtracking
+Elabore um algoritmo que, dados um vetor A[1..N] e um natural k, 
+escreva todos os arranjos dos elementos de A com tamanho k.
