@@ -1,0 +1,15 @@
+Trocos
+0.1
+
+Faça um algoritmo de programação dinâmica que resolva o problema
+dos trocos. Considere que a entrada consiste de um inteiro T, o qual
+representa o troco total a ser dado, um inteiro N e um vetor 
+M[1..N] que representa o conjunto de valores das moedas que compõe 
+o troco total.
+
+Ex.: 
+Entrada:                          Saída:
+T=11, N=4, M=[1,5,10,25]          4
+T=4,  N=3, M=[1,2,3]              4
+T=4,  N=4, M=[1,2,3,4]            5
+

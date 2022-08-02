@@ -1,0 +1,17 @@
+Linha de Montagem
+0.1
+{ DESCREVER O PROBLEMA AQUI }
+Faça um algoritmo de programação dinâmica que resolva o problema 
+da linha de montagem. Considere que a entrada consiste de um inteiro 
+n, uma matriz T[1..2][1..n], onde T[i][j] representa o tempo de 
+processamento de cada estação j na linha i, e uma matriz E[1..2][1..n-1],
+onde E[i][j] representa o tempo de troca entre as linhas i e 3-i da estação j 
+para a estação j+1. [O(n)]
+
+Ex.: 
+Entrada:                          Saída:
+3                                 8
+3 5 1
+2 1 7
+4 1
+3 4

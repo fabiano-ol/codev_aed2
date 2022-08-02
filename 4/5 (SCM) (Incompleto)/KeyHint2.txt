@@ -1,0 +1,5 @@
+- Considerando a versão mais geral do problema
+  dada pela dica anterior, observa-se que 
+  
+  C[i..j] é um palidromo <==> C[i] = C[j] e
+                              C[i+1..j-1] é um palidromo
