@@ -1,0 +1,24 @@
+Transformação de cadeia de caracteres
+0.1
+Dados duas cadeias de caractere A e B, determinar a menor
+sequência de operações para transformar A em B. 
+Cada operação consiste de:
+
+(i) inserção de um caractere em uma posição arbitrária;
+(ii) deleção de um caractere arbitrário da cadeia;
+(iii) substituição de um caractere arbitrário da cadeia 
+por outro. 
+
+Exemplo: 
+
+ERRO transforma-se em ACERTO mediante 3 operações:
+- inserção de A: AERRO;
+- inserção de C: ACERRO;
+- substituição de R por T: ACERTO.
+
+Faça um algoritmo de programação dinâmica que retorne o menor
+número de operações do problema da transformação de cadeia de 
+caracteres.
+
+Ex.: 
+Entrada:            Saída:

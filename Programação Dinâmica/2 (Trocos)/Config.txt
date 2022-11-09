@@ -1,6 +1,9 @@
 Trocos
 0.1
 
+O problema dos trocos consiste em, dado um determinado conjunto de 
+moedas e um valor, o programa retorne as diferentes possibilidades 
+deste valor ser entregue considerando as moedas disponíveis.
 Faça um algoritmo de programação dinâmica que resolva o problema
 dos trocos. Considere que a entrada consiste de um inteiro T, o qual
 representa o troco total a ser dado, um inteiro N e um vetor 

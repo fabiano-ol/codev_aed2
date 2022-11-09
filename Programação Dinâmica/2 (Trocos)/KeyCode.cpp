@@ -13,18 +13,16 @@ long long int Trocos(int T, int * M, int N) {
 		Mem[1][n] = 1;
 	}
 	
-	for(int t = 1; t <= T+1; t++){
+	for(int t = 1; t <= T; t++){
 		Mem[t+1][0] = 0;
 	}
 	
-	for (int t = 1; t <= T+1; t++){
+	for (int t = 1; t <= T; t++){
 		for(int n = 1; n <= N; n++){
-			//printf("Moeda sendo usada: %d\n", M[n-1]);
-			int maiorValor = t - M[n] >= 0 ? t - M[n] : 0;
-			Mem[t+1][n] = Mem[t+1][n-1] + Mem[maiorValor][n];
+			int maiorValor = t - M[n-1] >= 0 ? t - M[n-1] : -1;
+			Mem[t+1][n] = Mem[t+1][n-1] + Mem[maiorValor+1][n];
 			
-			printf("Mem[%d][%d]: %d\n", t+1, n, Mem[t+1][n]);
-			//printf("%d\n", Mem[t+1][n]);
+			//printf("Mem[%d][%d]: %d\n", t, n, Mem[t+1][n]);
 		}
 	}
 	

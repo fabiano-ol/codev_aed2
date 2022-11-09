@@ -32,8 +32,8 @@ int main() {
 	int ** e; //Tempo da troca entre as linhas de montagem (1 -> 2 e 2 -> 1)
 	
 	while (scanf("%d", &n)>0) {
-		t = (int **) malloc(sizeof(int) * 2);
-		e = (int **) malloc(sizeof(int) * 2);
+		t = (int **) malloc(sizeof(int *) * 2);
+		e = (int **) malloc(sizeof(int *) * 2);
 		for (int i = 0; i < 2; i++){
 			t[i] = (int *) malloc(n * sizeof(int));
 			e[i] = (int *) malloc(n * sizeof(int));
