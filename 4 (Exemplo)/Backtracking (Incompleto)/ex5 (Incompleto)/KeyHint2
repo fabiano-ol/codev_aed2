@@ -1,0 +1,27 @@
+
+
+- Considere resolver o problema mais geral a seguir:
+
+  Elabore um algoritmo que, dados um vetor A[1..N], um natural k, um vetor b[0..d-1], e um inteiro d,
+  escreva todos os arranjos dos elementos de A com tamanho k cujo o prefixo seja b[0..d-1].  
+  Note que os d elementos de b[0..d-1] devem pertencer a todas as permutações 
+  escritas pela função. Se d=k, então há somente uma permutação a ser escrita,
+  que é precisamente b[0]b[1]...b[k-1].
+
+- Caso d<k, então é necessário escolher mais um elemento para compor a 
+  permutação junto com b[0..d-1]. Os elementos que podem ser escolhidos são
+  aqueles de {1,...,n} que não pertencem a b[0..d-1]. Note que, se i pode ser
+  escolhido, então fazer
+  
+  b[d] = i
+  
+  e, em seguida, executar 
+  
+  Perm(n, k, b, d+1)
+  
+  fará com que o programa escreva todas as permutações de {1,...,n} de tamanho k
+  que contenha os d elementos b[0..d-1], além de i.
+  
+  Se o procedimento acima for feito para cada possível valor de i, então ao final,
+  teremos escrito todas as permutações de {1,...,n} de tamanho k
+  que contenha os d elementos b[0..d-1].
