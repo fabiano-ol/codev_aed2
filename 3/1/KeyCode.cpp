@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 long long int Fib(int n) {
-	//codev
+	// codev
 	long long int * M = (long long int *) malloc(sizeof(long long int) * (n + 1));
 	
 	for(int i = 0; i <= n; i++){
@@ -18,7 +18,7 @@ long long int Fib(int n) {
 	free(M);
 	
 	return r;
-	//codev
+	// codev
 }
 
 int main() {
