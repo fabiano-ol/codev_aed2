@@ -43,13 +43,10 @@ long long int SCM(int * S, int n) {
 	}
 	
 	for(int i = 1; i < n; i++){
-		long long int scmt = SCMt(S, i, T);
+		long long int scmt = SCM(S, i, T);
 		m = m > scmt ? m : scmt;
 	}
-	
-	for(int i = 0; i < 100; i++){
-		printf("Valor de T[%d]: %d\n", i, T[i]);
-	}
+
 	
 	return m;
 }
