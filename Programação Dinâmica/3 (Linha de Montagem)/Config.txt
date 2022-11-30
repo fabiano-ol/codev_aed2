@@ -1,6 +1,10 @@
 Linha de Montagem
 0.1
-{ DESCREVER O PROBLEMA AQUI }
+O problema da linha de montagem consiste em uma fábrica que possui
+2 linhas de montagem, cada uma com n estações.
+Cada estação possui um tempo de processamento e um custo de transferência
+para a outra linha. Com essas informações, é necessário determinar 
+o custo mínimo de produção considerando as duas linhas de montagem. 
 Faça um algoritmo de programação dinâmica que resolva o problema 
 da linha de montagem. Considere que a entrada consiste de um inteiro 
 n, uma matriz T[1..2][1..n], onde T[i][j] representa o tempo de 
