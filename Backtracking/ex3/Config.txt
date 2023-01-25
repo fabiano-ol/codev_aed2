@@ -1,5 +1,5 @@
 Backtracking
-Elabore um algoritmo que, dado um vetor A[1..N], escreva todas as permutações dos elementos de A.
+Elabore um algoritmo que, dado um inteiro n, escreva todas as permutações dos elementos de 1 a n.
 
 
 Ex.: 

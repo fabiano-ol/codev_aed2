@@ -7,8 +7,8 @@
   permutação junto com b[0..d-1]. Quais elementos de {1,...,n} que podem ser
   escolhidos?
   
-- Ao escolheremos um i possível, como podemos escrever todas as permutações todas 
-  as permutações de {1,...,n} de tamanho k que contenha os d elementos b[0..d-1], 
+- Ao escolheremos um i possível, como podemos escrever todas as permutações
+  de {1,...,n} de tamanho k que contenha os d elementos b[0..d-1], 
   e mais o i?
 
 - De posse do item anterior, como fazer o que se pede: escrever todas as permutações 

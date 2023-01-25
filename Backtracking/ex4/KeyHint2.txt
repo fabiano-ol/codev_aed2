@@ -2,9 +2,9 @@
 
 - Considere resolver o problema mais geral a seguir:
 
-  Elabore um algoritmo que, dados um vetor A[1..N], um natural k, um vetor b[0..d-1], e um inteiro d,
-  escreva todos os arranjos dos elementos de A com tamanho k cujo o prefixo seja b[0..d-1].  
-  Note que os d elementos de b[0..d-1] devem pertencer a todas as permutações 
+  Elabore um algoritmo que, dados um inteiro N, um natural k, um vetor b[0..d-1], e um inteiro d,
+  escreva todas as combinações dos elementos de 1 a N com tamanho k cujo o prefixo seja b[0..d-1].  
+  Note que os d elementos de b[0..d-1] devem pertencer a todas as combinações 
   escritas pela função. Se d=k, então há somente uma permutação a ser escrita,
   que é precisamente b[0]b[1]...b[k-1].
 
@@ -17,11 +17,11 @@
   
   e, em seguida, executar 
   
-  Perm(n, k, b, d+1)
+  Comb(n, k, b, d+1)
   
-  fará com que o programa escreva todas as permutações de {1,...,n} de tamanho k
+  fará com que o programa escreva todas as combinações de {1,...,n} de tamanho k
   que contenha os d elementos b[0..d-1], além de i.
   
   Se o procedimento acima for feito para cada possível valor de i, então ao final,
-  teremos escrito todas as permutações de {1,...,n} de tamanho k
+  teremos escrito todas as combinações de {1,...,n} de tamanho k
   que contenha os d elementos b[0..d-1].

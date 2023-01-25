@@ -9,9 +9,14 @@ Garante: Escrita de todas as permutações de {1,...,n} de tamanho k
 */
 void Comb(int n, int k, int b[], int d){
     if (k == d) {
+        printf("(");
         for (int i = 0; i < k; i++){ // escrevendo b[0..k-1]
             printf("%d", b[i]);
+            if(i != k-1){
+                printf(", ");
+            }
         }
+        printf(")");
         printf("\n");
     } else {
         for (int i = 1; i <= n; i++){

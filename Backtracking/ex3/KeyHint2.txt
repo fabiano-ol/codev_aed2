@@ -16,7 +16,7 @@
   
   e, em seguida, executar 
   
-  Perm(A, n, b, d+1)
+  Perm(n, b, d+1)
   
   fará com que o programa escreva todas as permutações de A[0..n-1]
   que contenha os d elementos b[0..d-1], além de A[i].
