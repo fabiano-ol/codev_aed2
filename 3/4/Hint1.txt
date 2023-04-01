@@ -1,0 +1,13 @@
+- Considere que sejam dados os valores x e y correspondendo ao
+  tempos até a (n-1)-ésima estação das esteiras da linha de 
+  montagem. A recursão pode lhe ajudar a obter tais x e y.
+
+  Como obter o melhor tempo até a n-ésima estação da linha 1 a partir de 
+  x e y? 
+  E o melhor tempo até a n-ésima estação da linha 2 a partir de x e y?
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.
+
+- Por fim, como o tempo mínimo de saída da linha de montagem é dado
+  pelo tempo de chegada até a n-ésima estação da linha 1 ou da linha 2?
