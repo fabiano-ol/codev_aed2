@@ -1,4 +1,0 @@
-- Note que em um tabuleiro de sudoku, não deve existir numeros iguais nas colunas, linhas e quadrados. 
-  Para verificar a posição [0,0], qual seriam os passos necessarios para o numero ser valido?
-
-- Após a checagem da primeira posicao, devera checar a proxima. O que se deve fazer caso não exista possiveis numeros nessa posicao?

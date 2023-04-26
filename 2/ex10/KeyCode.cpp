@@ -1,94 +1,104 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-#define N 9
+#define SIZE 9
 
-// Verifica se o número já está presente na linha "row"
-int isInRow(int grid[9][9], int row, int num) {
-  for (int col = 0; col < 9; col++) {
-    if (grid[row][col] == num) {
-      return 1;
-    }
-  }
-  return 0;
-}
+int board[SIZE][SIZE];
 
-
-// Verifica se o número já está presente na coluna "col"
-int isInCol(int grid[9][9], int col, int num) {
-  for (int row = 0; row < 9; row++) {
-    if (grid[row][col] == num) {
-      return 1;
-    }
-  }
-  return 0;
-}
-// Verifica se o número já está presente no quadrado 3x3 da célula (row, col)
-int isInBox(int grid[9][9], int startRow, int startCol, int num) {
-  for (int row = 0; row < 3; row++) {
-    for (int col = 0; col < 3; col++) {
-      if (grid[row + startRow][col + startCol] == num) {
-        return 1;
-      }
-    }
-  }
-  return 0;
-}
-// Diz se é possivel botar um numero na celula desejada
-int canPlaceNum(int grid[9][9], int row, int col, int num) {
-  int result = 1;
-
-  if (isInRow(grid, row, num) == 1) {
-    result = 0;
-  } else if (isInCol(grid, col, num) == 1) {
-    result = 0;
-  } else if (isInBox(grid, row - row % 3, col - col % 3, num) == 1) {
-    result = 0;
-  }
-
-  return result;
-}
-// Encontra a primeira célula vazia (onde ainda não foi escolhido nenhum número)
-int findUnassignedLocation(int grid[N][N], int *row, int *col) {
-    for (*row = 0; *row < N; (*row)++)
-        for (*col = 0; *col < N; (*col)++)
-            if (grid[*row][*col] == 0)
-                return 1;
-    return 0;
-}
-
-// Solve sudoku
-int solveSudoku(int grid[N][N]) {
-    int row, col;
-    if (findUnassignedLocation(grid, &row, &col) == 0)
-        return 1;
-    for (int num = 1; num <= 9; num++) {
-        if (canPlaceNum(grid, row, col, num) == 1) {
-            grid[row][col] = num;
-            if (solveSudoku(grid) == 1)
-                return 1;
-            grid[row][col] = 0;
+int is_valid(int row, int col, int num) {
+    // Check row for duplicate numbers
+    for (int i = 0; i < SIZE; i++) {
+        if (board[row][i] == num) {
+            return 0;
         }
     }
+
+    // Check column for duplicate numbers
+    for (int i = 0; i < SIZE; i++) {
+        if (board[i][col] == num) {
+            return 0;
+        }
+    }
+
+    // Check 3x3 square for duplicate numbers
+    int square_row = row - (row % 3);
+    int square_col = col - (col % 3);
+    for (int i = square_row; i < square_row + 3; i++) {
+        for (int j = square_col; j < square_col + 3; j++) {
+            if (board[i][j] == num) {
+                return 0;
+            }
+        }
+    }
+
+    return 1;
+}
+
+int solve(int row, int col) {
+    // If we've reached the end of the board, we're done
+    if (row == SIZE) {
+        return 1;
+    }
+
+    // If the current cell is not empty, move to the next cell
+    if (board[row][col] != 0) {
+        if (col == SIZE - 1) {
+            return solve(row + 1, 0);
+        } else {
+            return solve(row, col + 1);
+        }
+    }
+
+    // Try all possible numbers in the current cell
+    for (int num = 1; num <= 9; num++) {
+        if (is_valid(row, col, num)) {
+            board[row][col] = num;
+            if (col == SIZE - 1) {
+                if (solve(row + 1, 0)) {
+                    return 1;
+                }
+            } else {
+                if (solve(row, col + 1)) {
+                    return 1;
+                }
+            }
+            board[row][col] = 0;
+        }
+    }
+
+    // If no valid numbers work in this cell, backtrack
     return 0;
 }
-// Printa a Matriz resolvida ao usuario
-void printGrid(int grid[N][N]) {
-    for (int row = 0; row < N; row++) {
-        for (int col = 0; col < N; col++)
-            printf("%2d", grid[row][col]);
+
+void print_board() {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            printf("%d ", board[i][j]);
+        }
         printf("\n");
     }
 }
 
 int main() {
-    int grid[9][9];
-    for (int i = 0; i < 9; ++i) {
-        for (int j = 0; j < 9; ++j) {
-        scanf("%d", &grid[i][j]);
+    // Read the board from standard input
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            char c;
+            scanf(" %c", &c);
+            if (c == ' ') {
+                board[i][j] = 0;
+            } else {
+                board[i][j] = c - '0';
+            }
         }
     }
-    solveSudoku(grid);
-    printGrid(grid);
-	printf("Done");
+
+    // Solve the board
+    if (solve(0, 0)) {
+        printf("Solution:\n");
+        print_board();
+    } else {
+        printf("No solution found.\n");
+    }
+
+    return 0;
 }

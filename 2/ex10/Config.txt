@@ -1,0 +1,4 @@
+Backtracking
+Elabore um algoritmo para solucionar um problema de Sudoku. 
+Considere que a configuração inicial do problema será lida em uma matriz A[1..9, 1..9], onde cada posição é um branco ou um número de 1 a 9.
+0 representa "branco"
