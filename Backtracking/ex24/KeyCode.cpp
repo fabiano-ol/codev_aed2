@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 
-/* 
-    determina a existencia de um quadrado magico nxn que possiu prefixo P[1..d]
-*/
 int coord(int n, int i, int j){
     return ((i-1) * n) + j-1;
 }
 // 3 4 2      3*3 + 2
 
+/* 
+    determina a existencia de um quadrado magico nxn que possiu prefixo P[1..d]
+*/
 void Cubo(int n, int P[], int d, int U[]){
     if(d==n*n){
         int somaq = 0;
