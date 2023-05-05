@@ -10,13 +10,18 @@ bool used[MAX_N];
 void backtrack(int i, int size1, int size2) {
     if (i == N) {
         if (size1 > 0 && size2 > 0) {
-            printf("Group 1: ");
             for (int j = 0; j < size1; j++) {
-                printf("%d ", group1[j]);
+                if (j > 0) {
+                    printf(",");
+                }
+                printf("%d", group1[j]);
             }
-            printf("; Group 2: ");
+            printf(" / ");
             for (int j = 0; j < size2; j++) {
-                printf("%d ", group2[j]);
+                if (j > 0) {
+                    printf(",");
+                }
+                printf("%d", group2[j]);
             }
             printf("\n");
         }
