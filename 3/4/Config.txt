@@ -1,11 +1,20 @@
 Jogo do palito
-0.1
-DESCREVER AQUI
+1
+
+O problema do Jogo do Palito consiste em um jogo no qual dois participantes
+se alternam retirando 1, 2 ou 3 palitos de um conjunto inicial de n palitos.
+O jogador que pegar o último palito ganha a partida. A tarefa é determinar a
+estratégia vencedora para o jogador que inicia o jogo, assumindo que ambos
+joguem de maneira ótima. Faça um algoritmo de programação dinâmica que resolva 
+o problema do Jogo do Palito. Considere que a entrada consiste de um inteiro 
+n, representando o número inicial de palitos. A saída deve ser o número de 
+palitos que o primeiro jogador deve retirar para garantir a vitória, ou -1
+indicando que não há estratégia vencedora.
 
 Ex.: 
 Entrada:                          Saída:
-3                                 8
-3 5 1
-2 1 7
-4 1
-3 4
+3                                 3
+4                                 -1
+5                                 1
+6                                 2
+33                                1

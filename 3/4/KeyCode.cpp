@@ -4,37 +4,35 @@
 
 using namespace std;
 
-long long int JogoPalito(int n, int j, long long int ** M)  {
-	if(M[n][j] == -1) {
-		for (int i = 1; i <= min(3, n); i++) {
-			long long int jv = JogoPalito(n-i, 3-j, M);
-			if (jv == j) {
-				M[n][j] = j;
-				return M[n][j];
+int JogoPalito(int n, int ** M)  {
+	int N = n;
+	for (n = 0; n <= N; n++) {
+		for (int j = 1; j <= 2; j++) {
+			for (int i = 1; i <= min(3, n); i++) {
+				int jv = M[n-i][3-j];
+				if (jv == -1) {
+					M[n][j] = i;
+				} 
 			}
 		}
-		M[n][j] = 3-j;
 	}
-	
-	return M[n][j];
+	return M[N][1];
 }
 
 int main() {
 	int n; //Número de palitos inicial
-	int j; //Número do jogador que vai começar (1 ou 2)
-	long long int ** M; //Vetor de memorização
+	int ** M; //Vetor de memorização
 	
 	while (scanf("%d", &n)>0) {
-		scanf("%d", &j);
-		M = (long long int **) malloc(sizeof(long long int *) * (n + 1));
+		M = (int **) malloc(sizeof(int *) * (n + 1));
 		
 		for (int i = 0; i <= n; i++) {
-			M[i] = (long long int *) malloc(sizeof(long long int) * 3);
+			M[i] = (int *) malloc(sizeof(int) * 3);
 			for(int j = 0; j <= 2; j++) {
 				M[i][j] = -1;
 			}
 		}
-		printf("Vencedor: %lld\n", JogoPalito(n, j, M));
+		printf("%d\n", JogoPalito(n, M));
 	}
 	
 	free(M);

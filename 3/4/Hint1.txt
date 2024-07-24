@@ -1,13 +1,16 @@
-- Considere que sejam dados os valores x e y correspondendo ao
-  tempos até a (n-1)-ésima estação das esteiras da linha de 
-  montagem. A recursão pode lhe ajudar a obter tais x e y.
+- Seja JogoPalito(n,j) a função que retorna qual deve ser a quantidade 
+  de palitos da estratégia vencedora do jogador j havendo n palitos
+  na mesa.
 
-  Como obter o melhor tempo até a n-ésima estação da linha 1 a partir de 
-  x e y? 
-  E o melhor tempo até a n-ésima estação da linha 2 a partir de x e y?
+- Considere que sejam dados os valores 
+  x1 = JogoPalito(n-1,3-j),
+  x2 = JogoPalito(n-2,3-j),
+  x3 = JogoPalito(n-3,3-j),
+  correspondendo às melhores jogadas que o outro jogador (3-j) possui
+  havendo, respectivamente, n-1, n-2 ou n-3 palitos. A recursão pode lhe 
+  ajudar a obter tais valores x1, x2 e x3.
+
+- Como obter o valor de JogoPalito(n, j) a partir dos valores x1, x2 e x3?
 
 - Ao obter a recursão acima, atente para o fato de haver subproblemas
   repetidos; se for o caso, implemente a técnica de programação dinâmica.
-
-- Por fim, como o tempo mínimo de saída da linha de montagem é dado
-  pelo tempo de chegada até a n-ésima estação da linha 1 ou da linha 2?
