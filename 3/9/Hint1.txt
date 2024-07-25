@@ -1,0 +1,20 @@
+- Seja DistEdicao(A, n, B, m) a função que retorna a distância de edição 
+  entre as cadeias A[0..n-1] e B[0..m-1].
+
+- Suponha que os últimos caracteres de A e B são os mesmos (isto é, 
+  A[n-1]=B[m-1]). Considere que seja dado o valor x correspondendo à distância 
+  de edição entre A[0..n-2] e B[0..m-2]. A recursão pode lhe ajudar a obter 
+  x.
+
+  Como obter a distância de edição considerando o valor x neste caso?
+
+- Suponha que os últimos caracteres de A e B não são os mesmos. Considere que 
+  sejam dados os valores x correspondendo à distância de edição entre A[0..n-2]
+  e B[0..m-2], y correspondendo à distância de edição entre A[0..n-2]
+  e B[0..m-1] e z correspondendo à distância de edição entre A[0..n-1]
+  e B[0..m-2]. A recursão pode lhe ajudar a obter tais x, y e z.
+
+  Como obter a distância de edição considerando os valores x, y e z neste caso?
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.

@@ -1,5 +1,5 @@
 Transformação de cadeia de caracteres
-0.1
+1
 Dados duas cadeias de caractere A e B, determinar a menor
 sequência de operações para transformar A em B. 
 Cada operação consiste de:
@@ -22,3 +22,8 @@ caracteres.
 
 Ex.: 
 Entrada:            Saída:
+ERRO                3
+ACERTO
+
+COMPUTADOR          4
+CONDUTOR

@@ -3,7 +3,7 @@
 #include <cstring>  
 #include <algorithm>
 
-#define MAX_SIZE_CHAR 1001
+#define MAX_SIZE_CHAR 100000
 
 using namespace std;
 
@@ -80,7 +80,7 @@ int main() {
 		n = (int) strlen(A);
 		m = (int) strlen(B);
 		
-		printf("%lld\n", DistanciaEdicao(A, n, B, m));
+		printf("%lld\n", DistanciaEdicaoPD(A, n, B, m));
 	}
 	
 	free(A);
