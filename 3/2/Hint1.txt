@@ -1,8 +1,16 @@
-- Considere que seja dado o valor x correspondendo ao número
-  de trocos possível considerando o conjunto até a (n-1)-ésima moeda. 
-  A recursão pode lhe ajudar a obter tal x.
+- Seja Trocos(t,m,n) a função que retorna o número das diferentes
+  possibilidades de troco que totalizam o valor t considerando o conjunto
+  de moedas distintas m[1..n].
 
-  Como obter o número de trocos possível considerando a n-ésima moeda?
+- Considere que seja dado o valor x correspondendo ao número
+  de trocos possível considerando o conjunto com as n-1 primeiras moedas. 
+  Além disso, seja dado o valor y correspondendo ao número de trocos
+  possíveis para dar trocos menores que t considerando o conjunto com as
+  n moedas.
+  A recursão pode lhe ajudar a obter tanto x quanto y.
+
+- Como obter o número de trocos possíveis considerando o troco t com n
+  moedas a partir dos valores x e y?
 
 - Ao obter a recursão acima, atente para o fato de haver subproblemas
   repetidos; se for o caso, implemente a técnica de programação dinâmica.

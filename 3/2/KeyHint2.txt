@@ -1,0 +1,31 @@
+- Seja Trocos(t,m,n) a função que retorna o número das diferentes
+  possibilidades de troco que totalizam o valor t considerando o conjunto
+  de moedas distintas m[1..n].
+
+- Considere que seja dado o valor x correspondendo ao número
+  de trocos possível considerando o conjunto com as n-1 primeiras moedas. 
+  Além disso, seja dado o valor y correspondendo ao número de trocos
+  possíveis para dar trocos menores que t considerando o conjunto com as
+  n moedas.
+  A recursão pode lhe ajudar a obter tanto x quanto y.
+
+  Como obter o número de trocos possíveis considerando o troco t com n
+  moedas?
+
+- Note que Trocos(t,m,n) é igual ao número de maneiras de dar troco t sem
+  empregar a n-ésima moeda (que corresponde ao valor Trocos(t,m,n-1)), mais
+  o número de maneiras de se dar troco t-m[n-1] (o troco t debitado da 
+  n-ésima moeda) empregando todas as n moedas. Ou seja, 
+  Trocos(t,m,n)=Trocos(t,m,n-1)+Trocos(t-m[n-1],m,n).
+  Observe que a segunda parcela só existe se t-m[n-1] é maior ou igual a 0.
+
+- Os casos em que n=0 ou t=0 devem ser tratados separadamente.
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.
+  Empregue um vetor Mem[0..t][0..n] para armazenar as saídas, onde Mem[i][j]
+  corresponde ao número de trocos de valor i que se pode dar com as moedas
+  m[0..j-1].
+
+- Note que preencher o vetor Mem[i][j], com i variando de 0 até t, e j
+  variando entre 0 até n, é uma ordem adequada para a programação dinâmica. 
