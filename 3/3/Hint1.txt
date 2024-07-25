@@ -1,6 +1,6 @@
 - Considere que sejam dados os valores x e y correspondendo ao
-  tempos até a (n-1)-ésima estação das esteiras da linha de 
-  montagem. A recursão pode lhe ajudar a obter tais x e y.
+  tempos até a (n-1)-ésima estação das linhas 1 e 2, respectivamente. 
+  A recursão pode lhe ajudar a obter tais x e y.
 
   Como obter o melhor tempo até a n-ésima estação da linha 1 a partir de 
   x e y? 

@@ -1,5 +1,6 @@
 Linha de Montagem
-0.1
+1
+
 O problema da linha de montagem consiste em uma fábrica que possui
 2 linhas de montagem, cada uma com n estações.
 Cada estação possui um tempo de processamento e um custo de transferência

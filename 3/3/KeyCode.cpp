@@ -39,27 +39,51 @@ long long int Tmin(int n, int ** t, int ** e)  {
 
 int main() {
 	int n; //Número de estações de montagem em 1 linha
-	int u; //Número de linhas de montagem (?)
 	int ** t; //Tempo de processamento de cada máquina das esteiras
 	int ** e; //Tempo da troca entre as linhas de montagem (1 -> 2 e 2 -> 1)
 	
 	while (scanf("%d", &n)>0) {
+		bool casoDeCarga = (n == -1);
+		if (casoDeCarga) {
+			n = 200000;
+		}
+
 		t = (int **) malloc(sizeof(int *) * 2);
 		e = (int **) malloc(sizeof(int *) * 2);
 		for (int i = 0; i < 2; i++){
-			t[i] = (int *) malloc(n * sizeof(int));
-			e[i] = (int *) malloc(n * sizeof(int));
+			t[i] = (int *) malloc(sizeof(int) * n);
+			e[i] = (int *) malloc(sizeof(int) * n);
 		}
 		
 		for (int i = 0; i < 2; i++){
 			for (int j = 0; j < n; j++){
-				scanf("%d", &t[i][j]);
+				if (!casoDeCarga) {
+					scanf("%d", &t[i][j]);
+				} else {
+					if (i == 0) {
+						if (j % 2 == 0) {
+							t[i][j] = 1;
+						} else {
+							t[i][j] = 1000;
+						}
+					} else {
+						if (j % 2 == 0) {
+							t[i][j] = 1000;
+						} else {
+							t[i][j] = 1;
+						}
+					}
+				}
 			}
 		}
 		
 		for (int i = 0; i < 2; i++){
 			for (int j = 0; j < n-1; j++){
-				scanf("%d", &e[i][j]);
+				if (!casoDeCarga) {
+					scanf("%d", &e[i][j]);
+				} else {
+					e[i][j] = 1;
+				}
 			}
 		}
 		

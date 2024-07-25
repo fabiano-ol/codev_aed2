@@ -4,8 +4,8 @@
 
 - Note que o tempo de chegada até a n-ésima estação da linha 1 é obtido por 
   min{ x + T[1][n-1], y + T[2][n-1] + E[2][n-1] }.
-  Analogamente, o tempo de chegada até a n-ésima estação da linha 2 é obtido por
-  min{ x + T[1][n-1] + E[1][n-1], y + T[2][n-1] }.
+  Analogamente, o tempo de chegada até a n-ésima estação da linha 2 é obtido 
+  por min{ x + T[1][n-1] + E[1][n-1], y + T[2][n-1] }.
 
 - O caso em que n=1 deve ser tratado separadamente.
 
@@ -18,5 +18,6 @@
   é uma ordem adequada para a programação dinâmica. 
 
 - Por fim, observe que o tempo mínimo de saída da linha de montagem é dado
-  pelo tempo de chegada até a n-ésima estação da linha 1 ou da linha 2 acrescido de subproblemas
-  respectivos tempos de processamento (o que for menor).
+  pelo tempo de chegada até a n-ésima estação da linha 1 ou da linha 2 
+  acrescido de subproblemas respectivos tempos de processamento (o que for 
+  menor).
