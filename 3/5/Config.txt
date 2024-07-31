@@ -1,11 +1,22 @@
-Jogo do palito
-0.1
-DESCREVER AQUI
+Troco Mínimo
+3
+O problema do Troco Mínimo consiste em determinar o número mínimo de moedas 
+necessárias para formar uma determinada quantia t usando moedas de valores 
+específicos, a saber, os valores M[1..n]. Faça um algoritmo de programação 
+dinâmica que resolva o problema do troco mínimo. Considere que a entrada 
+consiste de um inteiro t, representando a quantia a ser formada, e um vetor 
+M[1..n], onde M[i] representa o valor da i-ésima moeda.
 
 Ex.: 
 Entrada:                          Saída:
-3                                 8
-3 5 1
-2 1 7
-4 1
-3 4
+t = 3                             3
+M = [1,5,10]
+
+t = 13                            4
+M = [1,5,10]
+
+t = 20                            2
+M = [1,5,10]
+
+t = 20                            4
+M = [1,5,12]

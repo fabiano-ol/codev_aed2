@@ -1,22 +1,20 @@
-- Considere que sejam dados os valores x e y correspondendo ao
-  tempos até a (n-1)-ésima estação das linhas 1 e 2, respectivamente. 
-  A recursão pode lhe ajudar a obter tais x e y.
+- Considere que sejam dados os valores x[i] correspondendo ao número 
+  mínimo de moedas necessárias para formar as quantias t-M[i], para todo 
+  i = 1,...,n. A recursão pode lhe ajudar a obter tais valores.
 
-- Note que o tempo de chegada até a n-ésima estação da linha 1 é obtido por 
-  min{ x + T[1][n-1], y + T[2][n-1] + E[2][n-1] }.
-  Analogamente, o tempo de chegada até a n-ésima estação da linha 2 é obtido por
-  min{ x + T[1][n-1] + E[1][n-1], y + T[2][n-1] }.
+- Note que, para formar um troco t, a maior moeda utilizada seja a moeda
+  M[i]. Neste caso, o menor número de moedas é dado por 
+  1 + TrocoMin(t-M[i], M, i). Como não sabemos qual o maior valor de moeda
+  utilizada no troco mínimo de t, devemos testar todas as possibilidades
+  e determinar o mínimo destas expressões. Isto é, 
+  TrocoMin(t, M, n) = min{1 + TrocoMin(t-M[i], M, i) | 1 <= i <= n}.
 
-- O caso em que n=1 deve ser tratado separadamente.
+- O caso em que t=0 deve ser tratado separadamente.
 
 - Ao obter a recursão acima, atente para o fato de haver subproblemas
   repetidos; se for o caso, implemente a técnica de programação dinâmica.
-  Empregue um vetor M[1..2][1..n] para armazenar as saídas, onde M[i][j] 
-  armazenará o tempo até a j-ésima estação da i-ésima linha.
+  Empregue um vetor Mem[0..t][0..n] para armazenar as saídas, onde Mem[i][j] 
+  armazenará o número mínimo para dar troco i utilizando as moedas M[1..j].
 
-- Note que preencher o vetor M da esquerda para a direita, de cima para baixo,
+- Note que preencher o vetor Mem da esquerda para a direita, de cima para baixo,
   é uma ordem adequada para a programação dinâmica. 
-
-- Por fim, observe que o tempo mínimo de saída da linha de montagem é dado
-  pelo tempo de chegada até a n-ésima estação da linha 1 ou da linha 2 acrescido de subproblemas
-  respectivos tempos de processamento (o que for menor).

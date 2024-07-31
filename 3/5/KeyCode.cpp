@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// T = troco a ser dado
+// t = troco a ser dado
 // M[0..n] são as moedas disponíveis (ordenadas)
 // retorna o menor número de moedas para dar troco T
 long long int TrocoMin(int T, int* M, int n)  {
@@ -24,7 +24,7 @@ long long int TrocoMin(int T, int* M, int n)  {
 				Mem[t][j] = 0;
 			} else {
 				float dMin = numeric_limits<float>::infinity();
-				for (int i = j; i >= 0; i--) {
+				for (int i = j; i > 0; i--) {
 					if (M[i] <= t) {
 						long long int d = 1 + Mem[t-M[i]][i];
 						if(dMin > d) {
@@ -46,15 +46,27 @@ int main() {
 	int * M;
 	
 	while (scanf("%d", &t)>0) {
-		scanf("%d", &n);
+		bool testeDeCarga = t == -1;
+
+		if (testeDeCarga) {
+			t = 2500;
+			n = 500;
+		} else {
+			scanf("%d", &n);
+		}
+		
 		M = (int *) malloc(sizeof(int) * (n + 1));
 
-		for (int i = 0; i < n; i++) {
-			scanf("%d", &M[i]);
+		for (int i = 1; i <= n; i++) {
+			if(testeDeCarga) {
+				M[i] = i;
+			} else {
+				scanf("%d", &M[i]);
+			}
 		}
 
-		printf("Numero minimo de moedas: %lld\n", TrocoMin(t, M, n));
+		printf("%lld\n", TrocoMin(t, M, n));
+		free(M);
 	}
 	
-	free(M);
 }
