@@ -1,7 +1,0 @@
-Subsequência Crescente Máxima
-0.1
-
-Ex.: 
-Entrada:                          Saída:
-
-

@@ -1,0 +1,16 @@
+- Seja SCM(S,n) a função que retorna a maior subsequência crescente
+  máxima que termina no elemento S[n]. Note que a solução da subsequência
+  crescente máxima corresponde ao valor 
+  
+  max{SCM(S,i) | 1 <= i <= n}
+
+- Considere que sejam dados os valores x_1, x_2, ..., x_(n-1) 
+  correspondendo aos tamanhos das maiores subsequências crescente que 
+  terminam nos elementos S[1], S[2], ..., S[n-1], respectivamente.
+  A recursão pode lhe ajudar a obter tais valores.
+
+- Como obter a subsequência crescente máxima que termina em S[n] a partir
+  dos valores x_1, x_2, ..., x_(n-1)?
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.

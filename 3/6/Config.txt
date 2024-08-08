@@ -1,0 +1,11 @@
+Subsequência Crescente Máxima
+3
+Dada uma sequência de números inteiros S[1..n], determinar uma subsequência
+(não necessariamente contígua) de comprimento máximo em que os valores
+da subsequência formam uma sequência estritamente crescente.
+
+Ex.: 
+Entrada:                          Saída:
+n = 10                            5
+S = [10,2,15,8,20,13,9,10,5,20]
+
