@@ -1,0 +1,13 @@
+Diferença mínima entre bipartições
+3
+Seja um conjunto de n inteiros do intervalo 0,...,K. Particione tais 
+inteiros em dois subconjuntos tal que minimize |S1 − S2|, onde S1 e S2
+denotam as somas dos elementos em cada um dos dois subconjuntos.
+
+Ex.: 
+Entrada:                          Saída:
+n = 4                             1 ({1,6,5},{11}) -> |(1+6+5)-(11)| = 1 
+S = {1,6,11,5}
+
+n = 5                             0 ({3,1,2},{4,2}) -> |(3+1+2)-(4+2)| = 0 
+S = {3,1,4,2,2}

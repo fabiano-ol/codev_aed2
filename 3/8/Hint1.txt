@@ -1,0 +1,27 @@
+- Seja DiferencaMinimaBiparticoes(n,S,d) a função que retorna Verdadeiro se 
+  existe uma bipartição dos elementos S[1..n] cuja diferença da soma dos 
+  elementos da primeira parte com a soma dos elementos da segunda parte 
+  for exatamente d.
+
+- Considere que sejam dados os valores x e y correspondendo a:
+  . x = Verdadeiro se existe uma bipartição dos elementos S[1..n-1] cuja 
+  diferença da soma dos elementos da primeira parte com a soma dos elementos 
+  da segunda parte for exatamente d-S[n].
+  . y = Verdadeiro se existe uma bipartição dos elementos S[1..n-1] cuja 
+  diferença da soma dos elementos da primeira parte com a soma dos elementos 
+  da segunda parte for exatamente d+S[n].
+  A recursão pode lhe ajudar a obter tais valores.
+
+- Como obter o valor de DiferencaMinimaBiparticoes(n,S,d) a partir dos 
+  valores x e y?
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.
+
+- Em C/C++, não é possível usar índices negativos. Uma técnica para contornar
+  isso é a seguinte:
+  para representar um vetor V1[-a..b], podemos usar o vetor V2[0..a+b] de 
+  tal forma que o elemento V1[i] estará armazenado em V2[i+a].
