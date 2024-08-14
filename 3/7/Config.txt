@@ -1,0 +1,14 @@
+Soma de Subconjunto
+5
+Dados um conjunto de números inteiros positivos S[1..n] e um inteiro A, 
+verifique se há um subconjunto de S cuja soma de seus elementos seja A.
+
+Ex.: 
+Entrada:                          Saída:
+A = 9                             true
+n = 6                             
+S = {3,34,4,12,5,2}
+
+A = 12                            false
+n = 5
+S = {1,2,4,16,32}
