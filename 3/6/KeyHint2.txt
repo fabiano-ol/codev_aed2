@@ -14,7 +14,7 @@
   S[j] < S[n], para algum j < n, acrescida do elemento S[n]. Portanto,
   para todo n > 1, temos que:
 
-  SCM(S,n) = max{SCM(S,j) + 1 | 1 <= j < n, S[j] < S[n]}.
+  SCM(S,n) = max{x_j + 1 | 1 <= j < n, S[j] < S[n]}.
 
 - O caso em que n=1 deve ser tratado separadamente.
 
