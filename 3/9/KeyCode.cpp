@@ -7,26 +7,8 @@
 
 using namespace std;
 
-//Solução utilizando recursão (ineficiente)
-long long int DistanciaEdicao(char *A, int n, char *B, int m) {
-	if(n == 0 || m == 0){
-		return n > m ? n : m;
-	} else {
-		if(A[n-1] == B[m-1]){
-			return DistanciaEdicao(A, n-1, B, m-1);
-		} else {
-			long long int valorSubstituicao = DistanciaEdicao(A, n-1, B, m-1) + 1;
-			long long int valorDelecao = DistanciaEdicao(A, n-1, B, m) + 1;
-			long long int valorInsercao = DistanciaEdicao(A, n, B, m-1) + 1;
-			
-			//Retorna o menor dos 3 valores
-			return min(min(valorSubstituicao, valorDelecao), valorInsercao);
-		}
-	}
-}
-
-//Solução utilizando programação dinâmica
 long long int DistanciaEdicaoPD(char *A, int n, char *B, int m) {
+	// codev
 	long long int ** Mem = (long long int **) malloc(sizeof(long long int *) * (n + 1));
 	for(int i = 0; i <= n; i++) {
 		Mem[i] = (long long int *) malloc(sizeof(long long int) * (m + 1));
@@ -63,6 +45,7 @@ long long int DistanciaEdicaoPD(char *A, int n, char *B, int m) {
 	free(Mem);
 	
 	return r;
+	// codev
 }
 
 int main() {

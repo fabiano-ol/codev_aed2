@@ -9,6 +9,7 @@ using namespace std;
 // M[0..n] são as moedas disponíveis (ordenadas)
 // retorna o menor número de moedas para dar troco T
 long long int TrocoMin(int T, int* M, int n)  {
+	// codev
 	long long int ** Mem = (long long int **) malloc(sizeof(long long int*) * (T+1));
 	for (int i = 0; i <= T; i++) {
 		Mem[i] = (long long int*) malloc(sizeof(long long int) * (n+1));
@@ -38,6 +39,7 @@ long long int TrocoMin(int T, int* M, int n)  {
 	}
 	
 	return Mem[T][n];
+	// codev
 }
 
 int main() {

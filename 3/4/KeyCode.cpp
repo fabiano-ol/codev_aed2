@@ -5,6 +5,7 @@
 using namespace std;
 
 int JogoPalito(int n, int ** M)  {
+	// codev
 	int N = n;
 	for (n = 0; n <= N; n++) {
 		for (int j = 1; j <= 2; j++) {
@@ -17,11 +18,12 @@ int JogoPalito(int n, int ** M)  {
 		}
 	}
 	return M[N][1];
+	// codev
 }
 
 int main() {
 	int n; //Número de palitos inicial
-	int ** M; //Vetor de memorização
+	int ** M;
 	
 	while (scanf("%d", &n)>0) {
 		M = (int **) malloc(sizeof(int *) * (n + 1));

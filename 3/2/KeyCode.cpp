@@ -5,6 +5,7 @@
 using namespace std;
 
 long long int Trocos(int T, int * M, int N) {
+	// codev
 	//T é o troco necessário total que retorne
 	//M[1..N] são as moedas diferentes. e.G: [1,5,10,25,50,100]
 	//retorna o número de possíveis trocos de valor T com tais moedas
@@ -41,6 +42,7 @@ long long int Trocos(int T, int * M, int N) {
 	free(Mem);
 	
 	return r;
+	// codev
 }
 
 int main() {

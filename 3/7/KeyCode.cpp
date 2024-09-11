@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 bool SomaSubconjunto(int A, int n, int * S) {
+	// codev
+
 	// Mem[i][j] = true se existe um subconjunto de S[1..i] com soma igual a j
 	// Queremos saber o valor do Mem[n][A]
 	// Mem[n][A] = Mem[n-1][A], caso o elemento S[n] não for tomado
@@ -39,6 +41,7 @@ bool SomaSubconjunto(int A, int n, int * S) {
     free(Mem);
 
     return retorno;
+	// codev
 }
 
 int main() {

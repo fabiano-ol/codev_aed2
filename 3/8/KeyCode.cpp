@@ -3,6 +3,7 @@
 
 
 int DiferencaMinimaBiparticoes(int n, int* S) {
+	// codev
 	int total_sum = 0;
     for (int i = 1; i <= n; i++) {
         total_sum += S[i];
@@ -44,6 +45,7 @@ int DiferencaMinimaBiparticoes(int n, int* S) {
     free(Mem);
 
     return min_diff;
+	// codev
 }
 
 int main() {

@@ -11,11 +11,14 @@ typedef struct Caixa {
     int largura, profundidade, altura;
 } Caixa;
 
+// codevremove
 // Função de comparação para ordenar as ca ixas de acordo com a área da base (largura * profundidade)
 bool compararBase(const Caixa& a, const Caixa& b) {
     return (a.largura * a.profundidade) > (b.largura * b.profundidade);
 }
+// codevremove
 
+// codevremove
 Caixa* gerarRotacoes(Caixa* caixas, int n) {
     Caixa* rotacoes = (Caixa*)malloc((3 * n) * sizeof(Caixa));
 
@@ -31,8 +34,11 @@ Caixa* gerarRotacoes(Caixa* caixas, int n) {
 
     return rotacoes;
 }
+// codevremove
 
 int AlturaMaximaPilha(Caixa* caixas, int n) {
+    // codev
+
     // Cada caixa pode gerar 3 rotações diferentes
     Caixa* todasRotacoes = gerarRotacoes(caixas, n);
 
@@ -63,6 +69,7 @@ int AlturaMaximaPilha(Caixa* caixas, int n) {
     free(Mem);
 
     return alturaMaxima;
+    // codev
 }
 
 int main() {

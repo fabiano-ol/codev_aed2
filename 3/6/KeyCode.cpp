@@ -5,6 +5,7 @@
 using namespace std;
 
 int SCM(int * S, int n) {
+	// codev
 	int * Mem = (int *) malloc(sizeof(int) * (n));
 
 	for (int i = 0; i < n; i++) {
@@ -22,6 +23,7 @@ int SCM(int * S, int n) {
 	} 
 
 	return tamanhoMaximo;
+	// codev
 }
 
 int main() {

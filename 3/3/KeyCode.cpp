@@ -4,8 +4,8 @@
 
 using namespace std;
 
-//tempo minimo do produto = min { f(1,n + t1,n ; f(2,n) + t2,n }
 long long int Tmin(int n, int ** t, int ** e)  {
+	// codev
 	//Tempo mínimo de chegar na linha l e na estação n
 	// t[i,j], 1 <= i <= 2; 1 <= j <= n
 	// e[i,j], 1 <= i <= 2; 1 <= j <= n
@@ -35,6 +35,7 @@ long long int Tmin(int n, int ** t, int ** e)  {
 	free(M);
 	
 	return r;
+	// codev
 }
 
 int main() {
