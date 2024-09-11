@@ -1,5 +1,5 @@
 Trocos
-1
+3
 O problema dos trocos consiste em, dado um determinado conjunto de 
 moedas e um valor, retornar as diferentes possibilidades 
 deste valor ser entregue considerando as moedas disponíveis.

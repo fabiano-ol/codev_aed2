@@ -43,8 +43,8 @@ int main() {
 	int ** e; //Tempo da troca entre as linhas de montagem (1 -> 2 e 2 -> 1)
 	
 	while (scanf("%d", &n)>0) {
-		bool casoDeCarga = (n == -1);
-		if (casoDeCarga) {
+		bool testeDeCarga = n == -1;
+		if (testeDeCarga) {
 			n = 200000;
 		}
 
@@ -57,7 +57,7 @@ int main() {
 		
 		for (int i = 0; i < 2; i++){
 			for (int j = 0; j < n; j++){
-				if (!casoDeCarga) {
+				if (!testeDeCarga) {
 					scanf("%d", &t[i][j]);
 				} else {
 					if (i == 0) {
@@ -79,7 +79,7 @@ int main() {
 		
 		for (int i = 0; i < 2; i++){
 			for (int j = 0; j < n-1; j++){
-				if (!casoDeCarga) {
+				if (!testeDeCarga) {
 					scanf("%d", &e[i][j]);
 				} else {
 					e[i][j] = 1;

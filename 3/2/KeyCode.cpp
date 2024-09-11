@@ -49,7 +49,8 @@ int main() {
 	int * M = NULL;
 	
 	while (scanf("%d", &T)>0) {
-		if (T == -1) {
+		bool testeDeCarga = T == -1;
+		if (testeDeCarga) {
 			T = 1000;
 			N = 1000;
 			M = (int *) malloc(sizeof(int) * N);

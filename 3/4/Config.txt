@@ -1,6 +1,5 @@
 Jogo do palito
-1
-
+3
 O problema do Jogo do Palito consiste em um jogo no qual dois participantes
 se alternam retirando 1, 2 ou 3 palitos de um conjunto inicial de n palitos.
 O jogador que pegar o último palito ganha a partida. A tarefa é determinar a
