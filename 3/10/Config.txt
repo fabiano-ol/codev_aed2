@@ -1,0 +1,25 @@
+Altura Máxima de Pilhas
+3
+Há um conjunto de n tipos de caixas retangulares. Todas as caixas de um 
+determinado tipo possuem as mesmas dimensões de largura, altura e 
+profundidade. O problema é escolher um número arbitrário de caixas e 
+empilhá-las de modo a conseguir obter a pilha de maior altura possível. 
+A restrição é de que uma caixa A pode ficar sobre outra B se as dimensões 
+da base de B são estritamente maiores que aquela da caixa de cima. 
+Suponha que pode-se rotacionar uma caixa de modo que qualquer um de seus
+lados funcione como base. Além disso, é possível usar mais de uma caixa
+do mesmo tipo.
+
+
+Ex.: 
+Entrada:                    Saída:
+n = 3                       15
+caixas[1] = [1 2 3]
+caixas[2] = [2 3 4]
+caixas[3] = [3 4 5]
+
+n = 4                       60
+caixas[1] = [4 6 7]
+caixas[2] = [1 2 3]
+caixas[3] = [4 5 6]
+caixas[4] = [10 12 32]

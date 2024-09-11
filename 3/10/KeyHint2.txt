@@ -1,0 +1,38 @@
+- Considere uma estrutura chamada Caixa com os campos largura, profundidade 
+  e altura. Cada caixa lida pode ser empregada no máximo 3 vezes para a 
+  construção da pilha, correspondendo às 3 possíveis bases em que ela pode
+  ser apoiada. Assim, após a leitura das dimensões das n caixas, assumimos
+  que um vetor caixas[1..3*n] será criado com todas as possíveis permutações
+  de cada caixa e ordenado decrescentemente e lexicograficamente pelos campos 
+  largura, profundidade e altura.
+
+- Seja AlturaMaximaPilha(caixas, n) a função que retorna a pilha de caixas
+  de maior altura que termina na caixa caixas[n]. Note que a solução do 
+  problema corresponde ao valor 
+  
+  max{AlturaMaximaPilha(caixas, i) | 1 <= i <= n}
+
+- Considere que sejam dados os valores x_1, x_2, ..., x_(n-1) 
+  correspondendo às alturas máximas de pilha que terminam nos elementos 
+  caixas[1], caixas[2], ..., caixas[n-1], respectivamente.
+  A recursão pode lhe ajudar a obter tais valores.
+
+- Note que, a altura máxima da pilha que termina em caixas[n] consiste
+  na altura máxima da pilha que termina em algum elemento 
+  caixas[j] com base estritamente maior que a base de caixas[n], para 
+  algum j < n, acrescida do elemento caixas[n]. Portanto, para todo n > 1, 
+  temos que:
+
+  AlturaMaximaPilha(caixas,n) = max{ x_j + caixas[n].altura |
+    1 <= j < n, caixas[j] de base maior que a base de caixas[n]
+  }.
+
+- O caso em que n=0 deve ser tratado separadamente.
+
+- Ao obter a recursão acima, atente para o fato de haver subproblemas
+  repetidos; se for o caso, implemente a técnica de programação dinâmica.
+  Empregue um vetor Mem[1..3*n] para armazenar as saídas, onde Mem[i] 
+  armazenará a altura máxima da pilha que termina em caixas[i].
+
+- Note que preencher o vetor Mem da esquerda para a direita, é uma ordem 
+  adequada para a programação dinâmica. 
