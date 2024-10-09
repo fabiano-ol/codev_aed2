@@ -1,0 +1,16 @@
+- Seja MaxSubsoma(A,n) a maior soma de elementos contíguos de A[1..n].
+  
+- Há 2 casos possíveis:
+  - A[n] não pertence à solução: neste caso, 
+    MaxSubsoma(A,n) = MaxSubsoma(A,n-1);
+  - A[n] pertence à solução: neste caso, MaxSubsoma(A,n) corresponde à 
+    maior soma de elementos contíguos que termina no elemento A[n]. 
+    Assim, introduziremos uma função para representar tal valor.
+    
+- Seja MaxSubsomaT(A,n) a maior soma de elementos contíguos de A[1..n] 
+  cujo último elemento seja A[n].
+  
+- Como MaxSubsomaT(A,n) pode ser escrito em função de MaxSubsomaT(A,n-1)?
+
+- Como MaxSubsoma(A,n) pode ser escrito em função de MaxSubsomaT(A,n) e 
+  MaxSubsoma(A,n-1)?

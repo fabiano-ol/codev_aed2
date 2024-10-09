@@ -1,8 +1,16 @@
-Seleção de Atividades
-0.1
-
+Soma de Elementos Consecutivos
+1
+Faça um algoritmo guloso que determine, dados um vetor de 
+inteiros A de tamanho n, a maior soma formada por elementos 
+contíguos de A.
 
 Ex.: 
 Entrada:                          Saída:
+n = 7                             15
+A = [-1 10 -2 7 -1 -2 1]
 
+n = 7                             10
+A = [10 -1 -1 -1 -1 -1 4]
 
+n = 7                             11
+A = [10 -1 -1 -1 -1 -1 6]

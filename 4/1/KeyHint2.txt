@@ -1,5 +1,41 @@
-- Considerando a versão mais geral do problema
-  dada pela dica anterior, observa-se que 
+- Seja MaxSubsoma(A,n) a maior soma de elementos contíguos de A[1..n].
   
-  C[i..j] é um palidromo <==> C[i] = C[j] e
-                              C[i+1..j-1] é um palidromo
+- Há 2 casos possíveis:
+  - A[n] não pertence à solução: neste caso, 
+    MaxSubsoma(A,n) = MaxSubsoma(A,n-1);
+  - A[n] pertence à solução: neste caso, MaxSubsoma(A,n) corresponde à 
+    maior soma de elementos contíguos que termina no elemento A[n]. 
+    Assim, introduziremos uma função para representar tal valor.
+    
+- Seja MaxSubsomaT(A,n) a maior soma de elementos contíguos de A[1..n] 
+  cujo último elemento seja A[n].
+  
+- Portanto,
+
+  MaxSubsomaT(A,n) = máx { MaxSubsomaT(A,n-1) + A[n] , A[n] }      (I) 
+  MaxSubsoma(A,n)  = máx { MaxSubsoma(A,n-1) , MaxSubsomaT(A,n) }  (II)
+  
+- Assim, assuma um comando iterativo na variável i que manterá duas variáveis, 
+  sMax e sI, armazenando valores tais que, qualquer que seja o valor de i, 
+  teremos
+  
+  sMaxT = MaxSubsomaT(A,i-1)
+  sMax  = MaxSubsoma(A,i-1)
+  
+  Usando as relações (I) e (II) acima, temos que se alterarmos tais variáveis
+  para
+  
+  sMaxT = máx { sMaxT + A[i], A[i] }
+  sMax  = máx{ sMax, sMaxT }
+  
+  então, após a atualização, 
+  
+  sMaxT = MaxSubsomaT(A,i)
+  sMax  = MaxSubsoma(A,i)
+  
+  Fazendo i=1,...,n, temos ao final das iterações que
+  
+  sMaxT = MaxSubsomaT(A,n)
+  sMax  = MaxSubsoma(A,n)
+  
+  Portanto, em sMax estará armazenado o valor desejado de MaxSubsoma(A,n).
