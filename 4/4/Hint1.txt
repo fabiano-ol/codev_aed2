@@ -1,5 +1,7 @@
-- Considere resolver o problema mais geral a seguir:
+- Se as atividades forem ordenadas pelo horário de fim, qual atividade 
+  certamente está em uma seleção de cardinalidade máxima? Argumente que
+  tal escolha é correta.
 
-  Verificar, dados um vetor de caracteres e inteiros i e j,
-  se a cadeia formada pelos elementos C[i..j], é um palíndromo.
-
+- Portanto, o algoritmo guloso deve, iterativamente, acrescentar à solução
+  a atividade prescrita na resposta anterior até que não hajam novas 
+  atividades a serem adicionadas.

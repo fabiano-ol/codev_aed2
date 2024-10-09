@@ -1,5 +1,17 @@
-- Considerando a versão mais geral do problema
-  dada pela dica anterior, observa-se que 
-  
-  C[i..j] é um palidromo <==> C[i] = C[j] e
-                              C[i+1..j-1] é um palidromo
+- Note que, se as atividades forem ordenadas pelo horário de fim, a
+  primeira atividade certamente está em uma seleção de cardinalidade
+  máxima. Suponha, por absurdo, que a atividade A[1] não esteja em nenhuma
+  solução ótima. Seja S um subconjunto de atividades não conflitantes
+  máximo. Seja A' a atividade de S com o menor horário de fim. Como, por
+  hipótese, A[1] não está em nenhuma solução ótima, então A[1] != A'.
+  Agora, forme a seleção de atividades S' = S - {A'} U {A[1]} (isto é,
+  S' é obtido a partir de S pela remoção de A' e adição de A[1]). Note que
+  A[1].fim <= A'.fim, e portanto, A[1] não conflita com nenhuma atividade de
+  S - {A'}, e portanto, S' contém atividades não conflitantes. Além disso,
+  S' tem que ser uma seleção ótima de atividades, pois possui o mesmo tamanho
+  de S. Isso contradiz a hipótese de que A[1] não está contida em nenhuma
+  solução ótima.
+
+- Portanto, o algoritmo guloso deve, iterativamente, acrescentar à solução
+  a atividade com menor horário de fim não conflitante com as atividades
+  já anteriormente adicionadas à solução.

@@ -1,8 +1,14 @@
-Soma de Elementos Subsequentes
-0.1
+Seleção de Atividades
+1
+
+Dado um conjunto de n atividades A[1..n], sendo
+A[i].inicio e A[i].fim, respectivamente, os
+horários de início e fim da i-ésima atividade,
+determinar o maior número de atividades duas 
+a duas sem interseção (A[i] e A[j] não tem interseção
+se ou A[j].inicio >= A[i].fim, ou A[i].inicio >= A[j].fim)
 
 
 Ex.: 
 Entrada:                          Saída:
-
 
