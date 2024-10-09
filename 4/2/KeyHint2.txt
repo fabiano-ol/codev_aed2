@@ -1,0 +1,10 @@
+- Seja Cobertura(A,n) o menor número de intervalos unitários que cobrem os
+  pontos A[1], ..., A[n].
+
+- Note que o ponto A[1] precisa ser coberto por algum intervalo unitário.
+  Sendo assim, podemos considerar, sem perda de generalidade, que tal intervalo
+  da solução ótima é o intervalo I = [A[1],A[1]+1]. Seja i o maior índice tal que
+  A[i] é coberto pelo intervalo I. A solução ótima consiste de cobrir os pontos
+  A[i+1], ..., A[n] com o menor número de intervalos unitários. Ou seja,
+  podemos reaplicar o mesmo raciocínio para determinar os demais intervalos
+  unitários da solução ótima.

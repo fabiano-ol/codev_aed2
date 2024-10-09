@@ -1,0 +1,6 @@
+- Seja Cobertura(A,n) o menor número de intervalos unitários que cobrem os
+  pontos A[1], ..., A[n].
+
+- Note que o ponto A[1] precisa ser coberto por algum intervalo unitário.
+  Sendo assim, qual o intervalo unitário podemos considerar, sem perda de 
+  generalidade, como pertencente à solução ótima?
