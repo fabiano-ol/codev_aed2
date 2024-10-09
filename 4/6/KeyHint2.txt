@@ -1,0 +1,46 @@
+- No caso do sistema monetário brasileiro, escolher a moeda de valor mais
+  alto, mas menor ou igual ao troco, está em uma solução ótima de troco mínimo.
+  Vamos provar por divisão de casos:
+
+  t <= 4:       neste caso, a única maneira de dar troco é usando moedas de 1, 
+                que é justamente a maior moeda que cabe no troco.
+        
+  5 <= t <= 9:  neste caso, a maior moeda que cabe no troco é a 5. Note que,
+                se 5 não estiver na solução, só poderia ser usado moedas de 1.
+                Certamente uma solução desse tipo não seria mínima, pois
+                poderíamos obter uma outra solução, ainda menor, em que 5
+                moedas de 1 são substituídas por uma de 5.
+
+  10 <= t <= 24:  neste caso, a maior moeda que cabe no troco é a 10. Note que,
+                se 10 não estiver na solução, só poderiam ser usadas moedas de 
+                5 e 1.
+                Certamente uma solução desse tipo não seria mínima, pois
+                poderíamos obter uma outra solução, ainda menor, em que uma 
+                combinação de moedas de 1 e 5 que totalizem o valor de 10 
+                centavos são substituídas por uma de 10.
+
+  25 <= t <= 49:  neste caso, a maior moeda que cabe no troco é a 25. Note que,
+                se 25 não estiver na solução, só poderiam ser usadas moedas de 
+                10, 5 e 1.
+                Certamente uma solução desse tipo não seria mínima, pois
+                poderíamos obter uma outra solução, ainda menor, em que uma 
+                combinação de moedas de 1, 5 e 10 que totalizem o valor de 25 
+                ou 30 centavos são substituídas por uma de 25 ou uma de 25 e 
+                uma outra de 5.
+
+  50 <= t <= 99:  neste caso, a maior moeda que cabe no troco é a 50. Note que,
+                se 50 não estiver na solução, só poderiam ser usadas moedas de 
+                25, 10, 5 e 1.
+                Certamente uma solução desse tipo não seria mínima, pois
+                poderíamos obter uma outra solução, ainda menor, em que uma 
+                combinação de moedas de 1, 5, 10 e 25 que totalizem o valor de 
+                50 centavos são substituídas por uma de 50.
+
+  t >= 100:     neste caso, a maior moeda que cabe no troco é a 100. Note que,
+                se 100 não estiver na solução, só poderiam ser usadas moedas de 
+                50, 25, 10, 5 e 1.
+                Certamente uma solução desse tipo não seria mínima, pois
+                poderíamos obter uma outra solução, ainda menor, em que uma 
+                combinação de moedas de 1, 5, 10, 25 e 50 que totalizem o valor 
+                de 100 centavos ou mais são substituídas por, no mínimo, uma de 
+                100.

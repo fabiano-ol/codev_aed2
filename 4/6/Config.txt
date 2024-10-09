@@ -1,0 +1,22 @@
+Troco Mínimo
+3
+O problema do Troco Mínimo consiste em determinar o número mínimo de moedas 
+necessárias para formar uma determinada quantia t usando moedas de valores 
+específicos, a saber, os valores M = [1,5,10,25,50,100]. Faça um algoritmo 
+de programação dinâmica que resolva o problema do troco mínimo. Considere 
+que a entrada consiste de um inteiro t, representando a quantia a ser formada, 
+e o vetor M.
+
+Ex.: 
+Entrada:                          Saída:
+t = 3                             3
+M = [1,5,10,25,50,100]
+
+t = 13                            4
+M = [1,5,10,25,50,100]
+
+t = 20                            2
+M = [1,5,10,25,50,100]
+
+t = 277                           6
+M = [1,5,10,25,50,100]
