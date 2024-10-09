@@ -1,0 +1,5 @@
+- Tabule a quantidade de palitos e o respectivo jogador vencedor, 
+  considerando que o jogador 1 é o primeiro a jogar. Você observa algum
+  padrão em relação aos valores de n para os quais o jogador 1 vence?
+
+- E se quem começasse fosse o jogador 2?

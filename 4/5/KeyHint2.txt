@@ -1,0 +1,19 @@
+- Observe os dados abaixo, que tabulam a quantidade de palitos e o 
+  respectivo jogador vencedor, considerando que o jogador 1 é o primeiro a 
+  jogar:
+
+  n   jogador vencedor
+  1   1
+  2   1
+  3   1
+  4   2
+  5   1
+  6   1
+  7   1
+  8   2
+  9   1
+  ...
+
+  Observe que o padrão é que o jogador 1 vence quando n não é múltiplo de 4,
+  e perde no caso contrário. O raciocínio é análogo quando é o jogador 2
+  que começa.
