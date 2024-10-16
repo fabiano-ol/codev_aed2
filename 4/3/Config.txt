@@ -1,0 +1,21 @@
+Programação de Tarefas para Maximizar Receita
+3
+Há uma série de N tarefas e uma recompensa de Ri reais se a tarefa i for 
+iniciada no máximo até a hora Ti para todo 1 ≤ i ≤ N.  Cada uma destas 
+tarefas leva 1h para ser executada, a primeira tarefa começa na hora zero, 
+e elas podem ser executadas em qualquer ordem. Faça uma programação das 
+tarefas de modo a maximizar a receita. 
+
+Ex: 
+se N = 5, 
+T1 = 1, T2 = 2, T3 = 3, T4 = 3, T5 = 4, 
+R1 = 1, R2 = 2, R3 = 2, R4 = 3, R5 = 1, 
+
+a programação de tarefas 4, 3, 2, 1, 5 tem receita 3+2+0+0+0=5, mas não é 
+ótima pela existência da programação 1, 2, 4, 5, 3 com receita 1+2+3+1+0=7.
+
+Ex.: 
+Entrada:                          Saída:
+n = 5                             8
+T = [1, 2, 3, 3, 4]
+R = [1, 2, 2, 3, 1]

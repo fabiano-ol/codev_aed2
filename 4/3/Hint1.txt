@@ -1,0 +1,6 @@
+- Considere uma estrutura chamada Tarefa com os campos T e R, correspondendo
+  ao prazo máximo e à receita. 
+
+- Na solução ótima, podemos mostrar que a tarefa t com maior receita estará 
+  presente na solução. Em qual slot de tempo podemos adicionar essa tarefa
+  sem perda de generalidade?

@@ -1,0 +1,22 @@
+- Considere uma estrutura chamada Tarefa com os campos T e R, correspondendo
+  ao prazo máximo e à receita. 
+
+- Na solução ótima, podemos considerar que a tarefa t com maior receita estará 
+  presente, alocada no slot de tempo p maior possível (isto é, até o seu prazo 
+  máximo). Suponha que essa alocação seja equivocada. Em outras palavras, suponha 
+  que, em qualquer solução ótima, t esteja ou em uma posição anterior, ou em uma 
+  posição adiante à que foi escolhida pela proposta acima. 
+  No caso de uma posição anterior, note que se tomarmos essa
+  suposta solução ótima e trocarmos de ordem a atividade t com aquela na 
+  posição p, a nova sequência manteve a receita obtida (não poderia aumentar 
+  pois trata-se de uma solução ótima, por hipótese). Logo, t estaria em uma
+  solução ótima na posição p. 
+  No caso de t estar em uma posição adiante de p, note que se tomarmos essa
+  suposta solução ótima e trocarmos de ordem a atividade t com aquela na 
+  posição p, a nova sequência manteve a receita obtida (não poderia aumentar 
+  pois trata-se de uma solução ótima, por hipótese). Com efeito, embora a tarefa
+  que estava na posição p, ao passar para a posição adiante, possa ter invalidado
+  sua receita, a vinda de t da posição adianta para p fez com que a receita
+  de t fosse obtida. Como a receita de t é no mínimo aquela da outra tarefa, 
+  realmente não se pode ter perdido nenhuma receita no total. Logo, t estaria 
+  em uma solução ótima na posição p. 
