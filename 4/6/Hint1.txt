@@ -1,0 +1,18 @@
+- Observe que, em um troco mínimo, os seguintes números máximos de moedas de 
+  cada tipo são dadas abaixo:
+  . Moeda de 1: máximo de 4 moedas (pois 5 moedas de 1 poderiam ser trocadas
+    por 1 de 5);
+  . Moeda de 5: máximo de 1 moeda (pois 2 moedas de 5 poderiam ser trocadas
+    por 1 de 10);
+  . Moeda de 10: máximo de 2 moedas (pois 3 moedas de 10 poderiam ser trocadas
+    por 1 de 25 e 1 de 5);
+  . Moeda de 25: máximo de 1 moeda (pois 2 moedas de 25 poderiam ser trocadas
+    por 1 de 50); 
+  . Moeda de 50: máximo de 1 moeda (pois 2 moedas de 50 poderiam ser trocadas
+    por 1 de 100); 
+
+- No caso do sistema monetário brasileiro, qual moeda deve ser escolhida que
+  com certeza pertence à solução ótima de troco mínimo?
+
+- Uma vez respondida a questão anterior, debite o valor dessa moeda no troco
+  a ser dado e repita o raciocínio.
