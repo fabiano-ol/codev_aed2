@@ -1,0 +1,12 @@
+
+- Considerando que estamos precisando escolher mais um elemento para compor a 
+  permutação junto com b[1..d]. Quais elementos de 1 a n que podem ser
+  escolhidos?
+
+- Ao escolhermos um i possível, como podemos escrever todas as permutações 
+  de 1 a n que contenham os elementos b[1..d], e mais o i?
+
+- De posse do item anterior, como fazer o que se pede: escrever todas as 
+  permutações de 1 a n que contenha os elementos b[1..d]?
+
+
