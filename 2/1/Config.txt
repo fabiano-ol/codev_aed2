@@ -1,0 +1,11 @@
+Combinações
+3
+Elabore um algoritmo que, dado os inteiros n e k escreva todas as combinações 
+dos elementos de 1..n de tamanho k.
+Escrever o conjunto das saídas ordenado lexicograficamente.
+
+
+Ex.: 
+Entrada:                        Saída:
+3 2                             (1,2)(1,3)(2,3)
+4 3                             (1,2,3)(1,2,4)(1,3,4)(2,3,4)

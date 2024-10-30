@@ -1,0 +1,13 @@
+- Note que os d elementos de b[1..d] devem pertencer a todas as combinações 
+  escritas pela função. Se d=k, então há somente uma combinação a ser escrita.
+  Qual é ela?
+
+- Caso d<k, então é necessário escolher mais um elemento para compor as
+  combinações junto com b[1..d]. Quais elementos de {1,...,n} que podem ser
+  escolhidos?
+  
+- Ao escolheremos um i possível, como podemos escrever todas as combinações 
+  de {1,...,n} de tamanho k que contenha os d elementos b[1..d], e mais o i?
+
+- De posse do item anterior, como fazer o que se pede: escrever todas as 
+  combinações de {1,...,n} de tamanho k que contenha os d elementos b[1..d]?
