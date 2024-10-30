@@ -1,0 +1,27 @@
+- Considere resolver o problema mais geral a seguir:
+
+  Elabore um algoritmo que, dados um inteiro n, um natural k, um vetor b[1..d], 
+  e um inteiro d, escreva todos os arranjos dos elementos de 1 a 
+  n com tamanho k cujo o prefixo seja b[1..d]. Note que os d elementos de 
+  b[1..d] devem pertencer a todas os arranjos escritas pela função. 
+  
+- Se d=k, então há somente um arranjo a ser escrito, que é precisamente 
+  (b[1],b[2],...,b[k]).
+
+- Caso d<k, então é necessário escolher mais elementos para compor o 
+  arranjo junto com b[1..d]. Os elementos que podem ser escolhidos são
+  aqueles de {1,...,n} que não pertencem a b[1..d]. Note que, se i pode ser
+  escolhido, então fazer
+  
+  b[d+1] = i
+  
+  e, em seguida, executar 
+  
+  Arranjo(n, k, b, d+1)
+  
+  fará com que o programa escreva todos os arranjos de {1,...,n} de tamanho k
+  que contenha os elementos b[1..d], além de i, correspondendo a b[d+1].
+  
+  Se o procedimento acima for feito para cada possível valor de i, então ao final,
+  teremos escrito todos os arranjos de {1,...,n} de tamanho k
+  que contenham os elementos b[1..d].

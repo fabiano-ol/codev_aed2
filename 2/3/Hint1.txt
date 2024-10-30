@@ -1,0 +1,13 @@
+- Note que os d elementos de b[1..d] devem pertencer a todos os arranjos 
+  escritas pela função. Se d=k, então há somente um arranjo a ser escrito.
+  Qual é ele?
+
+- Caso d<k, então é necessário escolher mais um elemento para compor os
+  arranjos junto com b[1..d]. Quais elementos de 1 a n que podem ser
+  escolhidos?
+  
+- Ao escolheremos um i possível, como podemos escrever todos os arranjos 
+  de 1 a n de tamanho k que contenha os elementos b[1..d], e mais o i?
+
+- De posse do item anterior, como fazer o que se pede: escrever todos os 
+  arranjos de 1 a n de tamanho k que contenha os elementos b[1..d]?
