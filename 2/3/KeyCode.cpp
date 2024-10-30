@@ -7,6 +7,7 @@ Garante: Escrita de todas as permutações de {1,...,n} de tamanho k
          que contenha os d elementos b[0..d-1]
 */
 void Arranjo(int n, int k, int b[], int d){
+    // codev
     if (k == d) {
     	printf("(");
         for (int i = 1; i <= k; i++){
@@ -32,6 +33,7 @@ void Arranjo(int n, int k, int b[], int d){
             }
         } 
     }
+    // codev
 }
 
 int main() {

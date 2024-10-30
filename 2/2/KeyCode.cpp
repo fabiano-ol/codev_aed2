@@ -7,6 +7,7 @@ Assume:  n >= k, 0 <= d <= k
 Garante: Escrita de todas as permutações de {1,...,n} que contenha os d elementos b[0..d-1]
 */
 void Perm(int n, int b[], int d){
+    // codev
     if (n == d) {
         printf("(");
         for (int i = 1; i <= n; i++){
@@ -31,6 +32,7 @@ void Perm(int n, int b[], int d){
             }
         } 
     }
+    // codev
 }
 
 int main() {
