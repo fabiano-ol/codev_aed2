@@ -1,0 +1,22 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  QuadradoMagicoBK(n, ref P[], ref U[], d, ref achou)
+
+  que, dado um inteiro n, um vetor P[1..d], um inteiro d, e um vetor U[1..n^2], 
+  escreve na tela o quadrado mágico de tamanho n no qual os primeiros d elementos 
+  (lidos linha a linha, coluna a coluna), são precisamente P[1..d], e certo 
+  número i está em P[1..d] se, e somente se, U[i] = VERDADEIRO. Além disso,
+  escreve em achou o valor lógico correspondente a se uma solução foi encontrada.
+
+- Se d=n^2, então o quadrado mágico está preenchido da única forma possível, 
+  ordenado lexicograficamente. Neste caso, basta escrever a solução.
+
+- Caso d<n^2, então é necessário escolher mais um elemento para compor o quadrado
+  mágico junto com P[1..d]. Quais elementos de 1 a n^2 que podem ser escolhidos?
+
+- Ao escolheremos um i possível, como podemos escrever o quadrado mágico  
+  de tamanho n que contenha os elementos P[1..d], e mais o i?
+
+- De posse do item anterior, como fazer o que se pede: escrever o quadrado mágico
+  de tamanho n que contenha inicialmente os elementos P[1..d], que seja 
+  lexicograficamente o menor?

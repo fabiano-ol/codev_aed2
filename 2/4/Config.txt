@@ -1,0 +1,16 @@
+Quadrado mágico
+3
+Um quadrado mágico é um quadrado nxn, preenchido com os números 1 a n^2 tal 
+que a soma das linhas é igual a soma das colunas que é igual a soma das 
+diagonais principais. Dado um valor n, apresentar o quadrado mágico nxn que
+seja lexicograficamente o menor. Entre os quadrados mágicos Q1 e Q2, diremos
+que Q1 é lexicograficamente menor que Q2 se a sequência de números tomados
+de Q1 linha a linha for lexicograficamente menor (ordem do dicionário) que a 
+sequência de números tomada de Q2 linha a linha. Caso não haja um quadrado
+mágico, escreva simplesmente "-".
+
+
+Ex.: 
+Entrada:            Saída:
+2                   -
+3                   (2,7,6)(9,5,1)(4,3,8)
