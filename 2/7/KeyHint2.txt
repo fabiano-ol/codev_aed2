@@ -1,0 +1,30 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  DivisaoJogadoresBK(n, d, ref grupo1[], ref grupo2[], n1, n2, ref achouSolucao)
+
+  que, dados inteiros n, d, n1, n2, dois vetores grupo1[1..n1] e grupo2[1..n2], 
+  e um valor lógico achouSolucao, escreve na tela todas as maneiras de dividir 
+  o conjunto de {1,...,n} em dois grupos não-vazios de tamanhos não 
+  necessariamente iguais, tal que o primeiro grupo precisa ter os elementos 
+  grupo1[1..n1] e o outro os elementos grupo2[1..n2]. Além disso, assume-se
+  que os elementos contidos em grupo1[1..n1] e grupo2[1..n2] formam uma divisão
+  do conjunto {1,...,d}. Finalmente, a função deve escrever em achouSolucao o 
+  valor VERDADEIRO assim que encontrar uma primeira forma de dividir.
+  
+- Se d=n, então a divisão está preenchida e basta escrevê-la caso ambos os
+  grupos sejam não vazios, o grupo1 seja menor que o grupo2 ou, no caso de 
+  terem o mesmo tamanho, o menor elemento estiver no grupo1.
+
+- Caso d<n, então é necessário escolher mais elementos para compor os grupos.
+  O próximo elemento para entrar para um dos grupos é o d+1, que pode entrar
+  para o primeiro caso n1 < n/2, ou pode entrar para o segundo.
+  Note que, se d+1 for escolhido para o grupo1, então fazer
+  
+  grupo1[n1] = d + 1
+  
+  e, em seguida, executar 
+  
+  DivisaoJogadoresBK(n, d+1, grupo1, grupo2, n1+1, n2, achouSolucao)
+  
+  fará com que o programa termine de resolver a divisão dos grupos. A alternativa
+  em que d+1 vai para o grupo2 resolve-se de maneira análoga.

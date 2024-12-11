@@ -1,0 +1,12 @@
+Divisão de jogadores em grupos distintos
+5
+Dado um grupo de n jogadores, numerados de 1 a n, escrever todas as 
+possíveis maneiras distintas de dividi-los em dois grupos não-vazios de 
+tamanhos não necessariamente iguais. Considere que na divisão, a quantidade 
+de elementos do grupo 1 é menor ou igual a do grupo 2. No caso de ser igual,
+considere que o grupo 1 é aquele que possui o menor elemento. 
+Para imprimir os elementos de cada grupo, imprimir em ordem crescente.
+
+Ex.: 
+Entrada:        Saída: 
+n = 4           (1/2,3,4);(1,2/3,4);(1,3/2,4);(1,4/2,3);(2/1,3,4);(3/1,2,4);(4/1,2,3)
