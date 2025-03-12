@@ -1,0 +1,28 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  SudokuBK(ref A[], linha, coluna)
+
+  que, dado a matriz A, onde todas as entradas antes da linha especificada, e
+  as entradas desta linha até a coluna especificada, estão já preenchidas de
+  forma compatível com as regras do Sudoku, retorne verdadeiro se for possível
+  terminar de preencher a matriz A com uma solução ou falso, caso contrário.
+  
+- Se linha=10, então a matriz encontra-se totalmente preenchida com uma solução,
+  e portanto, deve-se retornar verdadeiro.
+
+- Caso contrário, então é necessário escolher mais elementos para compor a 
+  matriz. Se A[linha][coluna] for diferente de zero, então nenhuma escolha deve
+  ser feita para esta posição. Nesse caso, podemos determinar a existência de
+  uma solução invocando SudokuBK(A, linha, coluna + 1), caso a coluna < 9 ou
+  invocando SudokuBK(A, linha + 1, 1), caso coluna = 9. Se A[linha][coluna] for
+  igual a zero, todos os números de 1 a 9 devem ser testados nessa posição. 
+  Para cada tentativa, devemos verificar se o número tentado já não existe na 
+  mesma linha, coluna ou quadrado 3x3. Caso não haja incompatibilidades, devemos
+  determinar se existe uma maneira de completar a matriz com uma solução pela 
+  invocação de SudokuBK(A, linha, coluna + 1) ou SudokuBK(A, linha + 1, 1), 
+  dependendo da coluna atual, analogamente ao caso anterior. 
+  Se alguma dessas tentativas identificar a existência de uma solução, deve-se
+  retornar verdadeiro. Caso contrário, retornar falso.
+
+
+

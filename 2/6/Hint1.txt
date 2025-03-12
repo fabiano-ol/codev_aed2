@@ -1,0 +1,21 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  SudokuBK(ref A[], linha, coluna)
+
+  que, dado a matriz A, onde todas as entradas antes da linha especificada, e
+  as entradas desta linha até a coluna especificada, estão já preenchidas de
+  forma compatível com as regras do Sudoku, retorne verdadeiro se for possível
+  terminar de preencher a matriz A com uma solução ou falso, caso contrário.
+  
+- Se linha=10, então a matriz encontra-se totalmente preenchida com uma solução,
+  e portanto, deve-se retornar verdadeiro.
+
+- Caso contrário, então é necessário escolher mais elementos para compor a 
+  matriz. Se A[linha][coluna] for diferente de zero, então nenhuma escolha deve
+  ser feita para esta posição. Nesse caso, como podemos determinar a existência 
+  de uma solução, uma vez que sabemos que todos os elementos anteriores estão
+  preenchidos e também o elemento A[linha][coluna], usando recursão?
+  
+- Se A[linha][coluna] for igual a zero, todos os números de 1 a 9 devem ser 
+  testados nessa posição. Para cada tentativa, como podemos determinar se 
+  existe uma solução?

@@ -1,0 +1,34 @@
+Sudoku
+3
+Elabore um algoritmo para solucionar um problema de Sudoku. O jogo de Sudoku
+consiste em preencher totalmente uma matriz de 9x9 inteiros, cada elemento
+um inteiro entre 1 e 9 de tal forma que nenhuma linha, nenhuma coluna, e nenhum
+quadrado 3x3 possuam números repetidos. A Figura 1 (à esquerda) mostra uma 
+entrada de Sudoku típica, e uma possível solução para o problema (à direita).
+Considere que a configuração inicial do problema será lida em uma matriz 
+A[1..9, 1..9], onde cada posição é um branco ou um número de 1 a 9.
+0 representa "branco". A saída deve ser "S" caso haja uma solução, ou "N"
+caso contrário.
+
+Ex.: 
+Entrada:               Saída:
+9 0 6 0 0 3 0 0 8      N
+0 0 0 0 6 0 0 0 3
+0 7 0 9 0 0 2 0 0
+0 5 0 0 0 7 0 0 0
+0 0 0 0 4 0 0 0 0
+0 0 0 5 0 0 0 6 0
+3 0 0 0 0 9 7 0 0
+0 0 9 0 3 0 0 0 6
+8 0 0 7 0 0 5 0 0
+
+5 3 0 0 7 0 0 0 0      S
+6 0 0 1 9 5 0 0 0
+0 9 8 0 0 0 0 6 0
+8 0 0 0 6 0 0 0 3
+4 0 0 8 0 3 0 0 1
+7 0 0 0 2 0 0 0 6
+0 6 0 0 0 0 2 8 0
+0 0 0 4 1 9 0 0 5
+0 0 0 0 8 0 0 7 9
+
