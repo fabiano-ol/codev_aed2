@@ -1,0 +1,23 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  PermutDistBK(n, ref B[], ref P[], d, ref Pids[])
+
+  que, dado um inteiro n, um vetor B[1..n], um vetor P[1..n], um inteiro d, 
+  e um vetor Pids[1..n] tal que 
+            se i é a posição em B do elemento P[j], então Pids[j]=i
+  escreve na tela todas as permutações de B[1..n] cujos primeiros elementos são 
+  P[1..d].
+  
+- Se d=n, então a única permutação é "[P[1],...,P[d]]".
+
+- Caso d<n, então é necessário escolher mais elementos para compor a permutação 
+  junto com P[1..d]. Quais elementos de 1 até n podem ser escolhidos?
+  Dica: só permita que elementos repetidos entrem na permutação se as 
+  respectivas posições no vetor original estiverem em ordem crescente. Isto
+  evitará repetir a permutação apenas trocando a ordem dos elementos repetidos.
+
+- Ao escolhermos um i possível, como podemos escrever as permutações de B[1..n] 
+  cujos primeiros elementos são P[1..d], e mais o i?
+
+- De posse do item anterior, como fazer o que se pede: escrever as permutações 
+  de B[1..n] cujos primeiros elementos são P[1..d]?

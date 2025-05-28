@@ -1,0 +1,15 @@
+Permutações distintas
+3
+Elabore um algoritmo para escrever todas as permutações distintas dos elementos 
+de um vetor B[1..n], no qual podem haver elementos repetidos.
+
+Ex.: 
+Entrada:                 Saída:
+n = 3                    [1,2,2][2,1,2][2,2,1]
+B = 1 2 2
+
+n = 3                    [1,2,3][1,3,2][2,1,3][2,3,1][3,1,2][3,2,1]
+B = 1 2 3
+
+n = 10                   [1,1,1,1,1,1,1,1,1,1]
+B = 1 1 1 1 1 1 1 1 1 1
