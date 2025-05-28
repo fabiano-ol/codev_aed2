@@ -1,0 +1,21 @@
+- Considere resolver o problema mais geral a seguir:
+
+  UltimoPalitoBK(n, j, ref P[], d) 
+
+  que, dado um inteiro n, um inteiro j (1 ou 2), um vetor P[1..n] e um inteiro d,
+  escreve o jogador que consegue forçar a vitória supondo n palitos iniciais,
+  P[1..d] representam as d primeiras jogadas, e j o número do próximo jogador.
+
+- Se o número de palitos restantes for igual a 0, então o jogador corrente 
+  perdeu.
+
+- Caso contrário, o jogador corrente deverá tentar remover 1, 2 ou 3 palitos
+  (se possível). Sejam j_1, j_2, j_3 o número do jogador que consegue forçar
+  a vitória caso o jogador j faça a remoção de 1, 2 ou 3 palitos, respectivamente.
+  Os valores de j_1, j_2 e j_3 podem ser obtidos por recursão:
+
+  P[d+1] = i;
+  j_i = UltimoPalitoBK(n, 3-j, P, d+1)
+
+  O jogador j consegue forçar a vitória somente se j_1, j_2 ou j_3 for igual
+  a j. Caso contrário, o jogador que forçará a vitória é o outro (3-j);

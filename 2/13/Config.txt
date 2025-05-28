@@ -1,0 +1,17 @@
+Último Palito
+3
+O problema do Jogo do Palito consiste em um jogo no qual dois participantes
+se alternam retirando 1, 2 ou 3 palitos de um conjunto inicial de n palitos.
+O jogador que pegar o último palito ganha a partida. A tarefa é determinar a
+estratégia vencedora para o jogador que inicia o jogo, assumindo que ambos
+joguem de maneira ótima. Faça um algoritmo de backtracking que resolva 
+o problema do Jogo do Palito. Considere que a entrada consiste de um inteiro 
+n, representando o número inicial de palitos e um inteiro j, representando
+o jogador que realiza a primeira jogada (1 ou 2). A saída deve ser o jogador 
+que pode forçar a vitória.
+
+Ex.: 
+Entrada:                        Saída:
+14 1                            1
+11 2                            2
+4 1                             2
