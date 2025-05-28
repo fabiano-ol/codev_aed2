@@ -1,0 +1,27 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  SomaBK(n, ref P[], k, soma)
+
+  que, dado um inteiro n, um vetor P[1..k], um inteiro k, e um inteiro soma 
+  correspondendo ao valor P[1]+P[2]+...+P[k], escreve na tela todos
+  os somatórios cujos primeiros elementos são P[1],...,P[k].
+  
+- Se soma=n, então o único somatório é "[P[1]+...+P[k]]".
+
+- Caso soma<n, então é necessário escolher mais elementos para compor o 
+  somatório junto com P[1..k]. Os elementos i que podem ser escolhidos 
+  são aqueles de {P[k]+1,...,n-soma}. Note que, se i pode ser escolhido, 
+  então fazer
+  
+  P[k+1] = i
+  
+  e, em seguida, executar 
+  
+  SomaBK(n, ref P[], k+1, soma+i)
+  
+  fará com que o programa escreva todos os somatórios de n cujos elementos 
+  iniciais sejam P[1..k+1].
+  
+  Se o procedimento acima for feito para cada possível valor de i, então ao 
+  final, teremos escrito todos os somatórios de n cujos elementos iniciais 
+  sejam P[1..k].

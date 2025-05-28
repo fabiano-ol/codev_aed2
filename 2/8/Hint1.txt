@@ -1,0 +1,18 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  SomaBK(n, ref P[], k, soma)
+
+  que, dado um inteiro n, um vetor P[1..k], um inteiro k, e um inteiro soma 
+  correspondendo ao valor P[1]+P[2]+...+P[k], escreve na tela todos
+  os somatórios cujos primeiros elementos são P[1],...,P[k].
+  
+- Se soma=n, então o único somatório é "[P[1]+...+P[k]]".
+
+- Caso soma<n, então é necessário escolher mais elementos para compor o 
+  somatório junto com P[1..k]. Quais elementos de 1 até n podem ser escolhidos?
+  
+- Ao escolhermos um i possível, como podemos escrever os somatórios de n que 
+  contenha os elementos P[1..k], e mais o i?
+
+- De posse do item anterior, como fazer o que se pede: escrever os somatórios
+  de n em parcelas crescentes que contenha inicialmente os elementos P[1..k]?

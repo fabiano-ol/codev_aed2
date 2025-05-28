@@ -1,0 +1,9 @@
+Somas naturais distintos
+3
+Dado um natural n, escrever todas as formas de somar naturais distintos em 
+ordem ascendente com resultado n. 
+
+Ex.: 
+Entrada:            Saída: 
+n = 5               [1+4][2+3][5]
+n = 10              [1+2+3+4][1+2+7][1+3+6][1+4+5][1+9][2+3+5][2+8][3+7][4+6][10]
