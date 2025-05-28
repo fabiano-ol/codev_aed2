@@ -1,0 +1,18 @@
+- Considere resolver o problema mais geral a seguir:
+
+  TrocoMinBK(t, ref M[], n, ref P[], d, ref dMin, somaAtual)
+
+  que, dados inteiros t, n, d, dMin, somaAtual e vetores M e P, escreve em dMin 
+  o menor número de moedas para dar troco t usando moedas de valor M[1],...,M[n],
+  supondo que as moedas P[1],...,P[d] já foram escolhidas. Em somaAtual, 
+  armazena-se o valor das moedas escolhidas (P[1]+...+P[d]). Adicionalmente,
+  assume-se que P[1..d] são valores não decrescentes.
+
+- Se somaAtual = t, então dMin é atualizado para d caso dMin seja maior do que
+  d.
+
+- Se somaAtual < t, quais são as próximas moedas que podem ser adicionadas ao 
+  troco sendo preparado P[1],...,P[d]?
+
+- Para cada valor de moeda possível, como determinar o menor número de moedas
+  resultante se essa moeda for adicionada no troco?

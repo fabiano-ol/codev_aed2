@@ -1,0 +1,26 @@
+Troco Mínimo
+3
+O problema do Troco Mínimo consiste em determinar o número mínimo de moedas 
+necessárias para formar uma determinada quantia t usando moedas de valores 
+específicos, a saber, os valores M[1..n]. Faça um algoritmo de backtracking 
+que resolva o problema do troco mínimo. Considere que a entrada 
+consiste de um inteiro t, representando a quantia a ser formada, um inteiro
+n e um vetor M[1..n], onde M[i] representa o valor da i-ésima moeda.
+
+Ex.: 
+Entrada:                        Saída:
+t = 3                             3
+n = 3
+M = [1,5,10]
+
+t = 13                            4
+n = 3
+M = [10,1,5]
+
+t = 20                            2
+n= = 3
+M = [1,5,10]
+
+t = 20                            4
+n = 3
+M = [1,5,12]
