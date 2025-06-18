@@ -1,0 +1,26 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  JogoDaVelhaBK(ref T[], linha, coluna, ref vitorias1, ref vitorias2, ref empates)
+
+  que, dado uma matriz T[1..3][1..3], inteiros linha, coluna, vitorias1, 
+  vitorias2 e empates, que representa que o tabuleiro T até a linha e coluna
+  especificadas já está preenchido (excluindo essa posição), escreve na tela 
+  a quantidade de formas que o jogador 1 pode vencer, que o jogador 2 pode 
+  vencer e de empates possíveis.
+
+- Se linha=4, então deve-se verificar se T corresponde a uma vitória do 
+  jogador 1, do jogador 2 ou um empate, e incrementar uma das variáveis
+  correspondentes (vitorias1, vitorias2 ou empates).
+
+- Caso linha<=3, então é necessário escolher qual será o preenchimento de 
+  T[linha][coluna]. Os preenchimentos possíveis são 0, 1 ou 2, indicando
+  respectivamente, que a posição está vazia, foi marcada pelo jogador 1 ou
+  pelo jogador 2.
+  Para cada preenchimento possível i, podemos determinar o número de vitórias
+  de cada jogador e de empates através da chamada recursiva:
+
+  JogoDaVelhaBK(T, linha, coluna+1, vitorias1, vitorias2, empates)
+
+  se colunas < 3, ou caso contrário, através da chamada:
+
+  JogoDaVelhaBK(T, linha+1, 1, vitorias1, vitorias2, empates)

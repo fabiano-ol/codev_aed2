@@ -1,0 +1,28 @@
+Jogo da Velha
+3
+Elabore um algoritmo para contar as possibilidades de vitória em um jogo da 
+velha incompleto. O jogo da velha consiste em uma matriz 3x3 preenchida com 
+os números 1, 2 e 0, onde 1 representa jogadas do jogador 1, 2 representa 
+jogadas do jogador 2 e 0 representa espaços em branco.
+Dado um tabuleiro incompleto, determine quantas maneiras o jogador 1 pode 
+vencer, quantas maneiras o jogador 2 pode vencer e quantas configurações 
+resultam em empate ("velha").
+Considere que a configuração inicial do problema será lida em uma matriz 
+T[1..3, 1..3]. A saída deve ser três valores inteiros representando, 
+respectivamente, as possibilidades de vitória do jogador 1, do jogador 2 e 
+as possibilidades de empate.
+Assuma que o jogador 1 foi o primeiro a jogar.
+
+Ex.: 
+Entrada:               Saída:
+1 2 0                  1 0 5 
+0 1 0
+2 0 0
+
+1 1 0                  2 1 3
+2 2 0
+0 0 0
+
+0 0 0                  626 316 64
+0 0 0
+0 0 0
