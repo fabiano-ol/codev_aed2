@@ -1,3 +1,0 @@
-Backtracking
-Elabore um algoritmo que, dado um natural n e um natural k, 
-escreva todos os arranjos dos elementos de 1 a n com tamanho k.

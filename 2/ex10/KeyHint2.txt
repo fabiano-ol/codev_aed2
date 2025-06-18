@@ -1,7 +1,0 @@
-- Note que em um tabuleiro de sudoku, não deve existir numeros iguais nas colunas, linhas e quadrados. 
-  Para verificar a posição [0,0], devemos checar se o numero escolhido existe na coluna, checando de board[0][0...9].
-  Caso o numero exista, retornar e tentar com o proximo numero. 
-  Devemos repetir esse processo para as linhas e quadrados. Para as linhas devemos checar board[0..9][0] e para o quadrado board[0..3][0..3]
-  Note que nessa etapa, é possivel escolher um numero que não faz parte da solução final, para isso usaremos o backtracking em passos futuros
-
-- Após a checagem da primeira posicao, devera checar a proxima. Caso após a checagem do proximo 
