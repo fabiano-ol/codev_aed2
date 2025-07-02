@@ -1,0 +1,25 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  RotaCidadesBK(ref D[][], ref P[], n, k, dP, mindP, ref minP, ref U)
+
+  que, dados inteiros n, k, dP e mindP, correspondendo, que as primeiras k
+  cidades da rota já foram escolhidas em P[1],...,P[k], cuja a distância 
+  percorrida até o momento é dP, estender essa rota para passar por n cidades
+  na menor distância possível, que deve ser escrita em mindP. A rota mínima 
+  deve ser escrita em minP[1..n]. Considere que U[i]=Verdadeiro se e somente
+  se i está presente em P[1..k].
+  
+- Se k=n, então essa rota deve ser considerada caso a distância entre a última 
+  cidade P[n] e a primeira cidade P[1] for diferente de -1. Se a distância dessa
+  rota for menor que mindP, então atualizamos a distância mínima, e copiamos 
+  a rota P para a rota mínima minP.
+
+- Caso k<n, então é necessário escolher mais cidades para compor a rota junto 
+  com P[1..k]. Quais cidades de 1 até n podem ser escolhidas?
+
+- Ao escolhermos uma cidade i possível, como podemos considerar todas as rotas 
+  de n cidades cujas cidades iniciais sejam P[1..k] acrescida da cidade i?
+
+- De posse do item anterior, como fazer o que se pede: considerar as rotas
+  de n cidades que contenha inicialmente as cidades P[1..k], e escrever em
+  minP/mindP a rota mínima encontrada e sua respectiva distância?
