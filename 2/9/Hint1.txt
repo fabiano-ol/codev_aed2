@@ -1,0 +1,25 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  DominoBK(ref T[][], ref P[][], ref U[][], linha, coluna)
+
+  pede-se determinar se é possível estender um retângulo P[1..7][1..8] parcialmente 
+  preenchido com peças de dominó até que se transforme em um retângulo T como
+  o especificado. Considere U[i][j]=Verdadeiro se a peça de faces i e j estiver 
+  sendo empregada em P e que a posição (linha,coluna) é a primeira posição de
+  P ainda não preenchida (com valor -1). As posições lidas de cima para baixo, 
+  da esquerda para direita.
+  
+- Se linha=8, então todas as linhas de 1 a 7 foram totalmente preenchidas em P.
+  Isto é, a resposta deve ser Verdadeiro.
+
+- Caso linha<8, então é necessário escolher mais peças para compor o tabuleiro
+  parcial. Considerando que a próxima peça a ser preenchida deverá ter uma
+  das faces na posição (linha,coluna) e a outra deve estar adjacente à direita
+  ou abaixo, quais peças podem ser escolhidas?
+
+- Ao escolhermos uma peça (i,j) possível, seja na horizontal ou na vertical,
+  como podemos considerar todos os preenchimentos possíveis a partir dali? 
+
+- De posse do item anterior, como fazer o que se pede: determinar se é possível 
+  estender o retângulo P[1..7][1..8] parcialmente preenchido com peças de dominó 
+  até que se transforme em um retângulo T como o especificado.

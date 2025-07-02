@@ -1,0 +1,28 @@
+Dominó
+3
+O conjunto das peças do jogo de dominó é formado por 28 retângulos cada um 
+com dois quadrados contendo cada um um número de 0 a 6. Cada peça é uma 
+combinação diferente das 28 possibilidades. Podemos dispor todas as peças 
+de um jogo de dominó em um retângulo de 7x8, podendo algumas peças serem
+colocadas horizontalmente e outras verticalmente. Verificar se uma
+configuração dada em um retângulo 7 x 8 corresponde às 28 peças do
+jogo (Maratona ACM, 1991, Final).
+
+
+Ex.: 
+Entrada:            Saída:            
+00010203            V
+04050611
+12131415
+16222324
+25263334
+35364445
+46555666
+
+60001023            F
+40304054
+50611124
+61314154
+51622235
+62425265
+63334356

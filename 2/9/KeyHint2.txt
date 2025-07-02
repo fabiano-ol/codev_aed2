@@ -1,0 +1,55 @@
+- Considere resolver o problema mais geral a seguir:
+  
+  DominoBK(ref T[][], ref P[][], ref U[][], linha, coluna)
+
+  pede-se determinar se é possível estender um retângulo P[1..7][1..8] parcialmente 
+  preenchido com peças de dominó até que se transforme em um retângulo T como
+  o especificado. Considere U[i][j]=Verdadeiro se a peça de faces i e j estiver 
+  sendo empregada em P e que a posição (linha,coluna) é a primeira posição de
+  P ainda não preenchida (com valor -1). As posições lidas de cima para baixo, 
+  da esquerda para direita.
+  
+- Se linha=8, então todas as linhas de 1 a 7 foram totalmente preenchidas em P.
+  Isto é, a resposta deve ser Verdadeiro.
+
+- Caso linha<8, então é necessário escolher mais peças para compor o tabuleiro
+  parcial. A próxima peça a ser preenchida terá uma das faces alocada na 
+  posição (linha,coluna), e a outra face na posição imediatamente à direita ou
+  abaixo. A colocação na horizontal é possível se U[f1][f2]=Falso, sendo a face 
+  f1=T[linha][coluna] e a face f2=T[linha][coluna+1]. Isto é, a peça de faces
+  f1 e f2 está disponível para ser usada. Nesse caso, fazer
+ 
+    U[f1][f2] = Verdadeiro; U[f2][f1] = Verdadeiro
+    P[linha][coluna] = f1
+    P[linha][coluna+1] = f2
+  
+    e, em seguida, executar 
+  
+    r1 = DominoBK(T,P,U,linha,coluna+2), se coluna < 7
+
+    ou
+
+    r1 = DominoBK(T,P,U,linha+1,1), se coluna = 7
+  
+  fará com que o programa retorne um valor lógico indicando se é possível 
+  preencher todo o tabuleiro dali em diante. A colocação na vertical é possível 
+  se U[f1][f2]=Falso, sendo a face f1=T[linha][coluna] e a face 
+  f2=T[linha+1][coluna]. Nesse caso, fazer
+ 
+    U[f1][f2] = Verdadeiro; U[f2][f1] = Verdadeiro
+    P[linha][coluna] = f1
+    P[linha+1][coluna] = f2
+  
+    e, em seguida, executar 
+  
+    r2 = DominoBK(T,P,U,linha,coluna+1), se coluna < 8
+
+    ou
+
+    r2 = DominoBK(T,P,U,linha+1,1), se coluna = 8
+
+  fará com que o programa retorne um valor lógico indicando se é possível 
+  preencher todo o tabuleiro dali em diante.
+
+  Se r1=Verdadeiro ou r2=Verdadeiro, então é possível preencher o retângulo 
+  dado com o retângulo parcialmente preenchido. Caso contrário, não é possível.
